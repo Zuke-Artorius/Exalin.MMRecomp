@@ -75,6 +75,7 @@ PhysBone exalinpeltLimb1Limb2;
 PhysBone exalinpeltLimb2Limb3;
 PhysBone exalinpeltLimb3Limb4;
 PhysBone exalinpeltLimb4Limb5;
+PhysBone exalinpeltLimb5Limb6;
 PhysBone exalinpeltLimb6Limb7;
 PhysBone exalinpeltLimb7Limb8;
 
@@ -84,17 +85,19 @@ typedef enum ExalinPeltBoneIndex {
     /* 0x00 */ EXALINPELT_BONE_LIMB2_LIMB3,
     /* 0x00 */ EXALINPELT_BONE_LIMB3_LIMB4,
     /* 0x00 */ EXALINPELT_BONE_LIMB4_LIMB5,
+    /* 0x00 */ EXALINPELT_BONE_LIMB5_LIMB6,
     /* 0x00 */ EXALINPELT_BONE_LIMB6_LIMB7,
     /* 0x00 */ EXALINPELT_BONE_LIMB7_LIMB8,
     /* 0x05 */ EXALINPELT_BONE_MAX            
 } ExalinPeltBoneIndex;
 
-PhysBone* exalinpeltPhysBones[7] = {
+PhysBone* exalinpeltPhysBones[8] = {
     &exalinpeltRootLimbLimb1,
     &exalinpeltLimb1Limb2,
     &exalinpeltLimb2Limb3,
     &exalinpeltLimb3Limb4,
     &exalinpeltLimb4Limb5,
+    &exalinpeltLimb5Limb6,
     &exalinpeltLimb6Limb7,
     &exalinpeltLimb7Limb8
 };
@@ -116,5 +119,5 @@ typedef struct ExalinPelt {
 // ExalinPelt manipulation based on Verlet Integration
 void ExalinPelt_RotateJoints(ExalinPelt* this, PhysBone* gPhysBones[], int chainStart, int chainEnd);
 void ExalinPelt_SetDefaultBodyPartsPos(ExalinPelt* this, Player* player, StandardLimb* gLimbs[], PhysLimb* gPhysLimbs[], PhysBone* gPhysBones[], int chainStart, int chainEnd, int bodyPartRoot, int bodyPartID);
-void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply_force, StandardLimb* gLimbs[], PhysLimb* gPhysLimbs[], PhysBone* gPhysBones[], int chainStart, int chainEnd, int bodyPartRoot, PosRot bodyPartPosRot);
+void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply_force, StandardLimb* gLimbs[], PhysLimb* gPhysLimbs[], PhysBone* gPhysBones[], int chainStart, int chainEnd, int bodyPartRoot, PosRot bodyPartPosRot, Vec3s bodyPartRotOffset);
 #endif
