@@ -14,8 +14,8 @@
 #include "z64extern.h"
 
 #define FLAGS 0
-#define GRAVITY     -5.f
-#define LIMB_MASS   1.f
+#define GRAVITY     -10.0f
+#define LIMB_MASS   1.5f
 #define PINNED      1
 #define NOT_PINNED  0
 
@@ -116,14 +116,21 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
     // I can't think of any way aside from hardcoding, because the standardlimbs' jointPos values
     // keep getting updated based on its last jointPos values before map reloads.
     // Values are directly copied from the generated Fast64 model file (in my case, gExalinPeltSkel.c)
-    Vec3s limb1_jointPos = { 0, 0, 0 };
-    Vec3s limb2_jointPos = { 0, 50, 0 };
-    Vec3s limb3_jointPos = { 0, 200, 0 };
-    Vec3s limb4_jointPos = { 0, 200, 0 };
-    Vec3s limb5_jointPos = { -350, -303, 22 };
-    Vec3s limb6_jointPos = { 0, 35, 0 };
-    Vec3s limb7_jointPos = { 0, 1300, 0 };
-    Vec3s limb8_jointPos = { 0, 650, 0 };
+    Vec3s limb1_jointPos =  { 0, 0, 0 };
+    Vec3s limb2_jointPos =  { 0, 50, 0 };
+    Vec3s limb3_jointPos =  { 0, 580, 0 };
+    Vec3s limb4_jointPos =  { 0, 580, 0 };
+    Vec3s limb5_jointPos =  { 0, 580, 0 };
+    Vec3s limb6_jointPos =  { 0, 580, 0 };
+    Vec3s limb7_jointPos =  { 0, 580, 0 };
+    Vec3s limb8_jointPos =  { 350, -303, 22 };
+    Vec3s limb9_jointPos =  { 0, 35, 0 };
+    Vec3s limb10_jointPos = { 0, 1300, 0 };
+    Vec3s limb11_jointPos = { 0, 650, 0 };
+    Vec3s limb12_jointPos = { -350, -303, 22 };
+    Vec3s limb13_jointPos = { 0, 35, 0 };
+    Vec3s limb14_jointPos = { 0, 1300, 0 };
+    Vec3s limb15_jointPos = { 0, 650, 0 };
     
     // default_jointPos values for every limb should NEVER change once assigned here
     Math_Vec3s_Copy(&exalinpeltPhysLimbs[1]->default_jointPos, &limb1_jointPos);
@@ -134,6 +141,13 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
     Math_Vec3s_Copy(&exalinpeltPhysLimbs[6]->default_jointPos, &limb6_jointPos);
     Math_Vec3s_Copy(&exalinpeltPhysLimbs[7]->default_jointPos, &limb7_jointPos);
     Math_Vec3s_Copy(&exalinpeltPhysLimbs[8]->default_jointPos, &limb8_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[9]->default_jointPos, &limb9_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[10]->default_jointPos, &limb10_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[11]->default_jointPos, &limb11_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[12]->default_jointPos, &limb12_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[13]->default_jointPos, &limb13_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[14]->default_jointPos, &limb14_jointPos);
+    Math_Vec3s_Copy(&exalinpeltPhysLimbs[15]->default_jointPos, &limb15_jointPos);
 
     Actor_SetScale(&this->actor, 0.01f);
     SkelAnime_InitFlex(
@@ -154,8 +168,12 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
     // Verlet integration starts here
     Verlet_InitPhysPlayer(&gExalinPhysPlayer, player);
 
-    ExalinPelt_SetDefaultBodyPartsPos(this, player, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB5, EXALINPELT_BODYPART_LIMB1, PLAYER_BODYPART_WAIST);
-    ExalinPelt_SetDefaultBodyPartsPos(this, player, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB6, EXALINPELT_BODYPART_LIMB8, EXALINPELT_BODYPART_LIMB5, PLAYER_BODYPART_RIGHT_THIGH);
+    ExalinPelt_SetDefaultBodyPartsPos(this, player, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+        EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7, EXALINPELT_BODYPART_LIMB1, PLAYER_BODYPART_WAIST);
+    ExalinPelt_SetDefaultBodyPartsPos(this, player, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+        EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11, EXALINPELT_BODYPART_LIMB8, PLAYER_BODYPART_RIGHT_THIGH);
+    ExalinPelt_SetDefaultBodyPartsPos(this, player, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+        EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15, EXALINPELT_BODYPART_LIMB12, PLAYER_BODYPART_LEFT_THIGH);
 }
 
 // @ProxyMM Example spawning this actor in south clock town.
@@ -419,15 +437,16 @@ Player Draw
 =================
 */
 RECOMP_HOOK_RETURN ("Player_Draw") void return_Skirt_Player_Draw(void) {
-    if (!recomp_get_config_u32("change_hairstyle") || gPlayerExalinPelt == NULL || gPlayStateExalinPelt == NULL) {
+    if (!recomp_get_config_u32("display_pelt") || gPlayerExalinPelt == NULL || gPlayStateExalinPelt == NULL) {
         return;
     }
     
 Vec3s rotOffsetWaist = {(s16)0, (s16)-16384, (s16)0};
 Vec3s rotOffsetThighR = {(s16)0, (s16)-16384, (s16)0};
+Vec3s rotOffsetThighL = {(s16)0, (s16)-16384, (s16)0};
 
     Player* player = GET_PLAYER(gPlayStateExalinPelt);
-    if (recomp_get_config_u32("change_hairstyle") && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
+    if (recomp_get_config_u32("display_pelt") && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = gPlayerExalinPelt;
 
         // Calculate Force
@@ -445,19 +464,24 @@ Vec3s rotOffsetThighR = {(s16)0, (s16)-16384, (s16)0};
         Math_Vec3s_Copy(&this->actor.world.rot, &player->actor.shape.rot);
 
         // Update ExalinPelt Limbs' positions based on Verlet Integration
-        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB5, EXALINPELT_BODYPART_LIMB1, peltWaist, rotOffsetWaist);
-        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB6, EXALINPELT_BODYPART_LIMB8, EXALINPELT_BODYPART_LIMB5, peltThighR, rotOffsetThighR);
+        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+            EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7, EXALINPELT_BODYPART_LIMB1, peltWaist, rotOffsetWaist);
+        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+            EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11, EXALINPELT_BODYPART_LIMB8, peltThighL, rotOffsetThighL);
+        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+            EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15, EXALINPELT_BODYPART_LIMB12, peltThighR, rotOffsetThighR);
 
         // Calculate rotations based on exalinpelt limbs' calculated positions
-        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB5);
-        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB6, EXALINPELT_BODYPART_LIMB8);
+        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7);
+        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11);
+        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15);
     }
 }
 
 
 void ExalinPelt_Draw(Actor* thisx, PlayState* play) {
     Player* player = GET_PLAYER(play);
-    if (recomp_get_config_u32("change_hairstyle") && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
+    if (recomp_get_config_u32("display_pelt") && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = (ExalinPelt*)thisx;
 
         OPEN_DISPS(play->state.gfxCtx);

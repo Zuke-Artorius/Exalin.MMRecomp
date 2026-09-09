@@ -8,7 +8,7 @@
 id = "exalin_recomp_pelt_physics"
 
 # Version of this mod.
-version = "0.0.2"
+version = "0.0.33"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Exalin"
@@ -96,11 +96,11 @@ additional_files = [ ]
 #default = "Lorem Ipsum"
 
 [[manifest.config_options]]
-id = "change_hairstyle"
-name = "Change Hairstyle"
+id = "display_pelt"
+name = "Display Pelt"
 description = """
-Toggle to change the hairstyle (Default or Ponytail)
+Toggle to display pelt
 """
 type = "Enum"
-options = [ "Default", "Ponytail" ]
-default = "Default"
+options = [ "Hide Pelt", "Show Pelt" ]
+default = "Show Pelt"
