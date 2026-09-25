@@ -12,6 +12,7 @@
 #include "proxymm_custom_actor.h"
 #include "recomp_api.h"
 #include "z64extern.h"
+#include "playermodelmanager_api.h"
 
 #define FLAGS 0
 #define GRAVITY     -10.0f
@@ -50,6 +51,9 @@ Player Init
 */
 ExalinPelt* gPlayerExalinPelt = NULL;
 PlayState* gPlayStateExalinPelt = NULL;
+
+extern PlayerModelManagerHandle gExalinModelHandle;
+bool isExalin;
 
 RECOMP_HOOK("Player_Init") void on_player_init(Actor* thisx, PlayState* play) {
     if (gPlayerExalinPelt == NULL) {
@@ -417,11 +421,10 @@ void ExalinPelt_RotateJoints(ExalinPelt* this, PhysBone* gPhysBones[], int chain
     }
 }
 
-
 void ExalinPelt_Update(Actor* thisx, PlayState* play) {
     Player* player = GET_PLAYER(play);
     ExalinPelt* this = (ExalinPelt*)thisx;
-
+    
     // Remove ExalinPelt when player transforms from human to non-human
     if (player->transformation != PLAYER_FORM_HUMAN && gPlayerExalinPelt != NULL && player->actor.draw == NULL && (player->stateFlags2 & PLAYER_STATE2_20000000)) {
         Actor_Kill(&this->actor);
@@ -436,17 +439,22 @@ void ExalinPelt_Update(Actor* thisx, PlayState* play) {
 Player Draw
 =================
 */
+
 RECOMP_HOOK_RETURN ("Player_Draw") void return_Skirt_Player_Draw(void) {
-    if (!recomp_get_config_u32("display_pelt") || gPlayerExalinPelt == NULL || gPlayStateExalinPelt == NULL) {
+    Player* player = GET_PLAYER(gPlayStateExalinPelt);
+
+    isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
+
+    if (!isExalin || gPlayerExalinPelt == NULL || gPlayStateExalinPelt == NULL) {
         return;
     }
     
-Vec3s rotOffsetWaist = {(s16)0, (s16)-16384, (s16)0};
-Vec3s rotOffsetThighR = {(s16)0, (s16)-16384, (s16)0};
-Vec3s rotOffsetThighL = {(s16)0, (s16)-16384, (s16)0};
+    Vec3s rotOffsetWaist = {(s16)0, (s16)-16384, (s16)0};
+    Vec3s rotOffsetThighR = {(s16)0, (s16)-16384, (s16)0};
+    Vec3s rotOffsetThighL = {(s16)0, (s16)-16384, (s16)0};
+    
 
-    Player* player = GET_PLAYER(gPlayStateExalinPelt);
-    if (recomp_get_config_u32("display_pelt") && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
+    if (isExalin && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = gPlayerExalinPelt;
 
         // Calculate Force
@@ -481,7 +489,10 @@ Vec3s rotOffsetThighL = {(s16)0, (s16)-16384, (s16)0};
 
 void ExalinPelt_Draw(Actor* thisx, PlayState* play) {
     Player* player = GET_PLAYER(play);
-    if (recomp_get_config_u32("display_pelt") && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
+
+    isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
+
+    if (isExalin && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = (ExalinPelt*)thisx;
 
         OPEN_DISPS(play->state.gfxCtx);

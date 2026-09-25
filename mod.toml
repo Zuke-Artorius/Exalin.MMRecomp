@@ -8,7 +8,7 @@
 id = "exalin_recomp_pelt_physics"
 
 # Version of this mod.
-version = "0.0.6"
+version = "0.0.64"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Exalin"
@@ -95,12 +95,24 @@ additional_files = [ ]
 #type = "String"
 #default = "Lorem Ipsum"
 
+#[[manifest.config_options]]
+#id = "display_pelt"
+#name = "Display Pelt"
+#description = """
+#Toggle to display pelt
+#"""
+#type = "Enum"
+#options = [ "Hide Pelt", "Show Pelt" ]
+#default = "Show Pelt"
+
 [[manifest.config_options]]
-id = "display_pelt"
-name = "Display Pelt"
-description = """
-Toggle to display pelt
-"""
-type = "Enum"
-options = [ "Hide Pelt", "Show Pelt" ]
-default = "Show Pelt"
+id = "sword_mtx_pos_x"
+name = "Sword Mtx Pos X"
+description = "x position of sword matrix"
+type = "Number"
+min = -3000
+max = 3000
+step = 10.0
+precision = 1
+percent = false
+default = 0

@@ -1,0 +1,52 @@
+#ifndef GEXGREATSWORDHILT_H
+#define GEXGREATSWORDHILT_H
+
+#include "ultra64.h"
+#include "global.h"
+
+extern u64 gExGreatSwordHilt_bgs_bot_ci8[];
+extern u64 gExGreatSwordHilt_bgs_bot_pal_rgba16[];
+extern u64 gExGreatSwordHilt_bgs_handle_ci8[];
+extern u64 gExGreatSwordHilt_bgs_handle_pal_rgba16[];
+extern u64 gExGreatSwordHilt_bgs_hilt_a_ci8[];
+extern u64 gExGreatSwordHilt_bgs_hilt_a_pal_rgba16[];
+extern u64 gExGreatSwordHilt_bgs_hilt_b_ci8[];
+extern u64 gExGreatSwordHilt_bgs_hilt_b_pal_rgba16[];
+extern u64 gExGreatSwordHilt_bgs_hilt_c_ci8[];
+extern u64 gExGreatSwordHilt_bgs_hilt_c_pal_rgba16[];
+extern u64 gExGreatSwordHilt_bgs_hilt_d_ci8[];
+extern u64 gExGreatSwordHilt_bgs_hilt_d_pal_rgba16[];
+extern u64 gExGreatSwordHilt_bgs_hilt_face_ci8[];
+extern u64 gExGreatSwordHilt_bgs_hilt_face_pal_rgba16[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_cull[8];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_0[12];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_0[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_1[8];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_1[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_2[12];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_2[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_3[10];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_3[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_4[14];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_4[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_5[18];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_5[];
+extern Vtx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_vtx_6[12];
+extern Gfx gExGreatSwordHilt_gExGreatSwordHilt_mesh_layer_Opaque_tri_6[];
+extern Gfx mat_gExGreatSwordHilt_bgs_bot_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_bot_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordHilt_bgs_handle_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_handle_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordHilt_bgs_hilt_a_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_hilt_a_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordHilt_bgs_hilt_b_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_hilt_b_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordHilt_bgs_hilt_c_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_hilt_c_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordHilt_bgs_hilt_d_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_hilt_d_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordHilt_bgs_hilt_face_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordHilt_bgs_hilt_face_f3d_layerOpaque[];
+extern Gfx gExGreatSwordHilt[];
+
+#endif

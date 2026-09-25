@@ -4,6 +4,8 @@
 #include "recompconfig.h"
 #include "playermodelmanager_api.h"
 #include "proxymm_custom_actor.h"
+#include "z64save.h"
+#include "z64item.h"
 
 #include "gExalinAdultSkel.h"
 #include "gExalinAdultFistsSkel.h"
@@ -15,12 +17,16 @@
 #include "gExTwinSword2Handle.h"
 #include "gExTwinSword3Blade.h"
 #include "gExTwinSword3Handle.h"
+#include "gExGreatSwordBlade.h"
+#include "gExGreatSwordHilt.h"
 
 #include "gExalinSheath1.h"
 #include "gExalinSheath2.h"
 #include "gExalinSheath3.h"
 
+#include "gExShieldDeku.h"
 #include "gExShieldHero.h"
+#include "gExShieldMirror.h"
 
 #include "gOcarinaDL.h"
 
@@ -34,19 +40,19 @@
 
 #define SHIELD_BACK_ROTATE_X 0.f
 #define SHIELD_BACK_ROTATE_Y 0.f
-#define SHIELD_BACK_ROTATE_Z 0.f
+#define SHIELD_BACK_ROTATE_Z 180.f
 #define SHIELD_BACK_SCALE 0.f
 #define SHIELD_BACK_TRANSLATE_X 0.f
-#define SHIELD_BACK_TRANSLATE_Y 0.f
-#define SHIELD_BACK_TRANSLATE_Z 180.f
+#define SHIELD_BACK_TRANSLATE_Y -200.f
+#define SHIELD_BACK_TRANSLATE_Z 0.f
 
 #define SWORD_BACK_ROTATE_X 0.f
 #define SWORD_BACK_ROTATE_Y 0.f
-#define SWORD_BACK_ROTATE_Z 0.f
+#define SWORD_BACK_ROTATE_Z -30.f
 #define SWORD_BACK_SCALE 1.f
-#define SWORD_BACK_TRANSLATE_X 0.f
-#define SWORD_BACK_TRANSLATE_Y 0.f
-#define SWORD_BACK_TRANSLATE_Z 180.f
+#define SWORD_BACK_TRANSLATE_X -800.f
+#define SWORD_BACK_TRANSLATE_Y 75.f
+#define SWORD_BACK_TRANSLATE_Z 50.f
 
 Mtx gExalinMaskMtx;
 Mtx gExalinShieldMtx;
@@ -70,6 +76,8 @@ TexturePtr gExalinEyeR[] = {
     gExalinAdultSkel_exalin_eyes_r_clench_ci8,
 };
 
+PlayerModelManagerHandle gExalinModelHandle;
+
 PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
 
     PlayerModelManagerHandle exalinHandle = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_pack", PMM_MODEL_TYPE_MODEL_PACK);
@@ -79,6 +87,8 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManagerHandle exalinHuman = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_human", PMM_MODEL_TYPE_ADULT);
     PlayerModelManager_setAuthor(exalinHuman, "Zuke");
     PlayerModelManager_setDisplayName(exalinHuman, "Exalin");
+
+    gExalinModelHandle = exalinHuman;
 
     PlayerModelManager_setEyesTextures(exalinHuman, gExalinEyeR);
     PlayerModelManager_setMouthTextures(exalinHuman, gExalinMouth);
@@ -93,18 +103,17 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     guPosition(&gExalinShieldMtx, SHIELD_BACK_ROTATE_X, SHIELD_BACK_ROTATE_Y, SHIELD_BACK_ROTATE_Z, SHIELD_BACK_SCALE, SHIELD_BACK_TRANSLATE_X, SHIELD_BACK_TRANSLATE_Y, SHIELD_BACK_TRANSLATE_Z);
     guPosition(&gExalinSwordMtx, SWORD_BACK_ROTATE_X, SWORD_BACK_ROTATE_Y, SWORD_BACK_ROTATE_Z, SWORD_BACK_SCALE, SWORD_BACK_TRANSLATE_X, SWORD_BACK_TRANSLATE_Y, SWORD_BACK_TRANSLATE_Z);
 
-    PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_MASKS, &gExalinMaskMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SHIELD1_BACK, &gExalinShieldMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SHIELD2_BACK, &gExalinShieldMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SHIELD3_BACK, &gExalinShieldMtx);
+    PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_MASKS, &gExalinMaskMtx);
     
-    /*
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SWORD1_BACK, &gExalinSwordMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SWORD2_BACK, &gExalinSwordMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SWORD3_BACK, &gExalinSwordMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SWORD4_BACK, &gExalinSwordMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_SWORD5_BACK, &gExalinSwordMtx);
-    */
+
     PlayerModelManager_addHandleToPack(exalinHandle, exalinHuman);
 
     PlayerModelManagerHandle exalinSwordKokiri = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_kokiri_pmm", PMM_MODEL_TYPE_SWORD_KOKIRI);
@@ -131,17 +140,24 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordGilded);
 
+    PlayerModelManagerHandle exalinSwordFairy = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_fairy_pmm", PMM_MODEL_TYPE_SWORD_GREAT_FAIRY);
+    PlayerModelManager_setAuthor(exalinSwordFairy, "Zuke");
+    PlayerModelManager_setDisplayName(exalinSwordFairy, "Exalin");
+    PlayerModelManager_setDisplayList(exalinSwordFairy, PMM_DL_SWORD_GREAT_FAIRY_BLADE, gExGreatSwordBlade);
+    PlayerModelManager_setDisplayList(exalinSwordFairy, PMM_DL_SWORD_GREAT_FAIRY_HILT, gExGreatSwordHilt);
+    PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordFairy);
+
     PlayerModelManagerHandle exalinShieldHero = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_hero_pmm", PMM_MODEL_TYPE_SHIELD_HERO);
     PlayerModelManager_setAuthor(exalinShieldHero, "Zuke");
     PlayerModelManager_setDisplayName(exalinShieldHero, "Exalin");
-    PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SHIELD_HERO, gExShieldHero);
+    PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SHIELD_HERO, gExShieldMirror);
     //PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3DL);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinShieldHero);
-
+    
     PlayerModelManagerHandle exalinShieldMirror = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_mirror_pmm", PMM_MODEL_TYPE_SHIELD_MIRROR);
     PlayerModelManager_setAuthor(exalinShieldMirror, "Zuke");
     PlayerModelManager_setDisplayName(exalinShieldMirror, "Exalin");
-    PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SHIELD_MIRROR, gExShieldHero);
+    PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SHIELD_MIRROR, gExShieldMirror);
     //PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3DL);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinShieldMirror);
 
@@ -221,8 +237,10 @@ void updateLink(PlayState* play) {
         *(LinkAnimationHeader*)Lib_SegmentedToVirtual(&gPlayerAnim_link_normal_okarina_swing) = gExalinAdultSkel_okarina_swingAnim;
         *(LinkAnimationHeader*)Lib_SegmentedToVirtual(&gPlayerAnim_clink_normal_okarina_walk) = gExalinAdultSkel_okarina_walkAnim;
         *(LinkAnimationHeader*)Lib_SegmentedToVirtual(&gPlayerAnim_clink_normal_okarina_walkB) = gExalinAdultSkel_okarina_walkbAnim;
+
     }
 }
+
 
 
 RECOMP_CALLBACK("*", recomp_on_play_main)

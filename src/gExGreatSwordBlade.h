@@ -1,0 +1,63 @@
+#ifndef GEXGREATSWORDBLADE_H
+#define GEXGREATSWORDBLADE_H
+
+#include "ultra64.h"
+#include "global.h"
+
+extern u64 gExGreatSwordBlade__04000000_rgba32[];
+extern u64 gExGreatSwordBlade_bgs_bot_ci8[];
+extern u64 gExGreatSwordBlade_bgs_bot_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_tip_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_tip_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_a_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_a_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_b_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_b_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_c_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_c_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_d_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_d_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_e_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_e_pal_rgba16[];
+extern u64 gExGreatSwordBlade_bgs_blade_f_ci8[];
+extern u64 gExGreatSwordBlade_bgs_blade_f_pal_rgba16[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_cull[8];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_0[21];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_0[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_1[18];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_1[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_2[20];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_2[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_3[18];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_3[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_4[18];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_4[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_5[18];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_5[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_6[12];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_6[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_7[12];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_7[];
+extern Vtx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_vtx_8[30];
+extern Gfx gExGreatSwordBlade_gExGreatSwordBlade_mesh_layer_Opaque_tri_8[];
+extern Gfx mat_gExGreatSwordBlade_texgen_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_texgen_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_bot_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_bot_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_tip_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_tip_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_a_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_a_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_b_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_b_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_c_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_c_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_d_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_d_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_e_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_e_f3d_layerOpaque[];
+extern Gfx mat_gExGreatSwordBlade_bgs_blade_f_f3d_layerOpaque[];
+extern Gfx mat_revert_gExGreatSwordBlade_bgs_blade_f_f3d_layerOpaque[];
+extern Gfx gExGreatSwordBlade[];
+
+#endif
