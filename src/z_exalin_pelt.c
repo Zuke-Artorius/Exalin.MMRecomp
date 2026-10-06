@@ -291,8 +291,13 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void ExalinPelt_on_Player_PostLimbDra
     }
 }
 
+extern PlayerActionFunc Player_Action_36;
 
 void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply_force, StandardLimb* gLimbs[], PhysLimb* gPhysLimbs[], PhysBone* gPhysBones[], int chainStart, int chainEnd, int bodyPartRoot, PosRot bodyPartPosRot, Vec3s bodyPartRotOffset) {
+    
+    // Match player actor's scale so physics actor scales correctly with giant's mask transformation
+    Math_Vec3f_Copy(&this->actor.scale, &player->actor.scale);
+    
     // Set Root limb's bodyPartsPos
     Math_Vec3f_Copy(&this->bodyPartsPos[bodyPartRoot], &bodyPartPosRot.pos);
     Math_Vec3f_Copy(&gPhysLimbs[bodyPartRoot]->curr_pos, &bodyPartPosRot.pos); // Rotation needs to be applied
@@ -342,6 +347,19 @@ void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply
             u8 linkOnGround = (player->actor.bgCheckFlags & BGCHECKFLAG_GROUND);
             if (linkOnGround) {
                 player_vel.y = 0.f;
+            }
+
+            // Disable the opposing movement while riding Epona, climbing ladder/wall, or opening door.
+            // Riding Epona: PLAYER_STATE1_800000
+            // Climbing Wall: PLAYER_STATE1_200000
+            // Opening Door: Player_Action_36
+            // Note: Physics for riding Epona was disabled due to some unwanted physics behavior. This may be 
+            //       due to the codebase relying on player->actor.velocity for player's world velocity. This works 
+            //       for most cases EXCEPT when player is riding on Epona, where player->actor.velocity might be 
+            //       saving the player's last frame's world velocity. 
+            if (player->stateFlags1 & (PLAYER_STATE1_800000 | PLAYER_STATE1_200000) ||
+                player->actionFunc == Player_Action_36) {
+                player_vel = (Vec3f){0.f, 0.f, 0.f};
             }
 
             Verlet_LimbUpdatePos(gPhysLimbs[i], &apply_force, &player_vel);

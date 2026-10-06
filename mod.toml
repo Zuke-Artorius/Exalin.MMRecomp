@@ -8,19 +8,22 @@
 id = "exalin_recomp_pelt_physics"
 
 # Version of this mod.
-version = "0.0.64"
+version = "0.0.95"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Exalin"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
-This is a custom model of Exalin. Features physics and custom idle animation.
+This is a custom model of Exalin.
+
+This mod features physics derived from Metalhead's work.
+Thanks Metalhead!
 """
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
-short_description = "Have a nice timezone"
+short_description = "See you next timezone!"
 
 # Authors of this mod.
 authors = [ "Exalin, Zuke" ]
@@ -35,6 +38,7 @@ minimum_recomp_version = "1.2.2"
 dependencies = [
 # Example dependency:
     "yazmt_mm_playermodelmanager:0.6.1",
+    "yazmt_mm_modelreplacer",
     "ProxyMM_CustomActor",
 
 ]
@@ -43,7 +47,7 @@ dependencies = [
 # list aren't present. You can query the presence of a given dependency by using `recomp_is_dependency_met` in recomputils.h.
 # Calling a function imported from an optional dependency that isn't present will trigger an error.
 optional_dependencies = [
-
+    "yazmt_mm_bunnyhoodtweaks:0.2.1"
 ]
 
 # Native libraries (e.g. DLLs) and the functions they export.
@@ -66,7 +70,9 @@ func_reference_syms_file = "Zelda64RecompSyms/mm.us.rev1.syms.toml"
 data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zelda64RecompSyms/mm.us.rev1.datasyms_static.toml" ]
 
 # Additional files to include in the mod.
-additional_files = [ ]
+additional_files = [ 
+    "thumb.dds"
+]
 
 #[[manifest.config_options]]
 #id = "enum_option"
@@ -104,15 +110,3 @@ additional_files = [ ]
 #type = "Enum"
 #options = [ "Hide Pelt", "Show Pelt" ]
 #default = "Show Pelt"
-
-[[manifest.config_options]]
-id = "sword_mtx_pos_x"
-name = "Sword Mtx Pos X"
-description = "x position of sword matrix"
-type = "Number"
-min = -3000
-max = 3000
-step = 10.0
-precision = 1
-percent = false
-default = 0

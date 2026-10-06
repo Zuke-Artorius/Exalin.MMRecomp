@@ -4,6 +4,7 @@
 #include "recompconfig.h"
 #include "playermodelmanager_api.h"
 #include "proxymm_custom_actor.h"
+#include "modelreplacer_api.h"
 #include "z64save.h"
 #include "z64item.h"
 
@@ -29,6 +30,29 @@
 #include "gExShieldMirror.h"
 
 #include "gOcarinaDL.h"
+
+#include "gExalinFisher.h"
+#include "gExalinHood.h"
+#include "gExalinAdultHoodSkel.h"
+
+#include "gi/gGiCull.h"
+#include "gi/gGiExalinSword1DL.h"
+#include "gi/gGiExalinSword2DL.h"
+#include "gi/gGiExalinSword3DL.h"
+#include "gi/gGiExalinSword4DL.h"
+
+#include "gi/gGiOcarinaDL.h"
+
+#include "gi/gGiExalinHood.h"
+#include "gi/gGiExalinFisher.h"
+
+#include "gExalinIconKokiriSword.h"
+#include "gExalinIconRazorSword.h"
+#include "gExalinIconGildedSword.h"
+#include "gExalinIconFairySword.h"
+#include "gExalinIconMaskHood.h"
+#include "gExalinIconMaskFisher.h"
+#include "gExalinIconOcarina.h"
 
 #define MASK_ROTATE_X 0.f
 #define MASK_ROTATE_Y 0.f
@@ -77,8 +101,23 @@ TexturePtr gExalinEyeR[] = {
 };
 
 PlayerModelManagerHandle gExalinModelHandle;
+PlayerModelManagerHandle gExalinHoodHandle;
+PlayerModelManagerHandle gExalinKokiriSwordHandle;
+PlayerModelManagerHandle gExalinRazorSwordHandle;
+PlayerModelManagerHandle gExalinGildedSwordHandle;
+PlayerModelManagerHandle gExalinFairySwordHandle;
+PlayerModelManagerHandle gExalinHeroShieldHandle;
+PlayerModelManagerHandle gExalinMirrorShieldHandle;
+PlayerModelManagerHandle gExalinMaskFisherHandle;
+PlayerModelManagerHandle gExalinOcarinaHandle;
+
+u8 bunnyHoodTweaks;
+
+RECOMP_IMPORT("yazmt_mm_bunnyhoodtweaks", bool BunnyHoodTweaks_isPlayerRunSpeedModified(PlayState *play, Player *player));
 
 PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
+
+    DependencyStatus bunnyHoodTweaks = recomp_is_dependency_met("yazmt_mm_bunnyhoodtweaks");
 
     PlayerModelManagerHandle exalinHandle = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_pack", PMM_MODEL_TYPE_MODEL_PACK);
     PlayerModelManager_setAuthor(exalinHandle, "Zuke");
@@ -123,6 +162,7 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_HILT, gExTwinSword1Handle);
     PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_SHEATH, gExalinSheath1);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordKokiri);
+    gExalinKokiriSwordHandle = exalinSwordKokiri;
 
     PlayerModelManagerHandle exalinSwordRazor = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_razor_pmm", PMM_MODEL_TYPE_SWORD_RAZOR);
     PlayerModelManager_setAuthor(exalinSwordRazor, "Zuke");
@@ -131,6 +171,7 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_HILT, gExTwinSword2Handle);
     PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_SHEATH, gExalinSheath2);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordRazor);
+    gExalinRazorSwordHandle = exalinSwordRazor;
 
     PlayerModelManagerHandle exalinSwordGilded = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_gilded_pmm", PMM_MODEL_TYPE_SWORD_GILDED);
     PlayerModelManager_setAuthor(exalinSwordGilded, "Zuke");
@@ -139,6 +180,7 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_HILT, gExTwinSword3Handle);
     PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordGilded);
+    gExalinGildedSwordHandle = exalinSwordGilded;
 
     PlayerModelManagerHandle exalinSwordFairy = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_fairy_pmm", PMM_MODEL_TYPE_SWORD_GREAT_FAIRY);
     PlayerModelManager_setAuthor(exalinSwordFairy, "Zuke");
@@ -146,6 +188,7 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setDisplayList(exalinSwordFairy, PMM_DL_SWORD_GREAT_FAIRY_BLADE, gExGreatSwordBlade);
     PlayerModelManager_setDisplayList(exalinSwordFairy, PMM_DL_SWORD_GREAT_FAIRY_HILT, gExGreatSwordHilt);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordFairy);
+    gExalinFairySwordHandle = exalinSwordFairy;
 
     PlayerModelManagerHandle exalinShieldHero = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_hero_pmm", PMM_MODEL_TYPE_SHIELD_HERO);
     PlayerModelManager_setAuthor(exalinShieldHero, "Zuke");
@@ -153,19 +196,37 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SHIELD_HERO, gExShieldMirror);
     //PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3DL);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinShieldHero);
-    
+    gExalinHeroShieldHandle = exalinShieldHero;
+
     PlayerModelManagerHandle exalinShieldMirror = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_mirror_pmm", PMM_MODEL_TYPE_SHIELD_MIRROR);
     PlayerModelManager_setAuthor(exalinShieldMirror, "Zuke");
     PlayerModelManager_setDisplayName(exalinShieldMirror, "Exalin");
     PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SHIELD_MIRROR, gExShieldMirror);
     //PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3DL);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinShieldMirror);
+    gExalinMirrorShieldHandle = exalinShieldMirror;
 
     PlayerModelManagerHandle exalinOcarina = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_ocarina_pmm", PMM_MODEL_TYPE_OCARINA_TIME);
     PlayerModelManager_setAuthor(exalinOcarina, "Zuke");
     PlayerModelManager_setDisplayName(exalinOcarina, "Exalin");
     PlayerModelManager_setDisplayList(exalinOcarina, PMM_DL_OCARINA_TIME, gOcarinaDL);
     PlayerModelManager_addHandleToPack(exalinHandle, exalinOcarina);
+    gExalinOcarinaHandle = exalinOcarina;
+
+    PlayerModelManagerHandle exalinHood = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_hood_pmm", PMM_MODEL_TYPE_MASK_BUNNY);
+    PlayerModelManager_setAuthor(exalinHood, "Zuke");
+    PlayerModelManager_setDisplayName(exalinHood, "Exalin");
+    PlayerModelManager_setDisplayList(exalinHood, PMM_DL_MASK_BUNNY, gGiCull);
+    PlayerModelManager_addHandleToPack(exalinHandle, exalinHood);
+    gExalinHoodHandle = exalinHood;
+
+    PlayerModelManagerHandle exalinFisher = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_fisher_pmm", PMM_MODEL_TYPE_MASK_POSTMAN);
+    PlayerModelManager_setAuthor(exalinFisher, "Zuke");
+    PlayerModelManager_setDisplayName(exalinFisher, "Exalin");
+    PlayerModelManager_setDisplayList(exalinFisher, PMM_DL_MASK_POSTMAN, gExalinFisher);
+    PlayerModelManager_addHandleToPack(exalinHandle, exalinFisher);
+    gExalinMaskFisherHandle = exalinFisher;
+    
 }
 
 TexturePtr gExalinEyeL[] = {
@@ -229,9 +290,28 @@ extern LinkAnimationHeader gPlayerAnim_link_normal_okarina_swing[];
 extern LinkAnimationHeader gPlayerAnim_clink_normal_okarina_walk[];
 extern LinkAnimationHeader gPlayerAnim_clink_normal_okarina_walkB[];
 
+bool exalinKokiriSwordOn;
+bool exalinRazorSwordOn;
+bool exalinGildedSwordOn;
+bool exalinFairySwordOn;
+bool exalinHeroShieldOn;
+bool exalinMirrorShieldOn;
+bool exalinMaskFisherOn;
+bool exalinOcarinaOn;
+
 void updateLink(PlayState* play) {
     Player* player = GET_PLAYER(play);
-    if (player->transformation == PLAYER_FORM_HUMAN) {
+
+    exalinKokiriSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinKokiriSwordHandle);
+    exalinRazorSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinRazorSwordHandle);
+    exalinGildedSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinGildedSwordHandle);
+    exalinFairySwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinFairySwordHandle);
+    exalinHeroShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinHeroShieldHandle);
+    exalinMirrorShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinMirrorShieldHandle);
+    exalinMaskFisherOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinMaskFisherHandle);
+    exalinOcarinaOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinOcarinaHandle);
+    if (player->transformation == PLAYER_FORM_HUMAN) {    
+    
         *(LinkAnimationHeader*)Lib_SegmentedToVirtual(&gPlayerAnim_link_normal_okarina_end) = gExalinAdultSkel_okarina_endAnim;
         *(LinkAnimationHeader*)Lib_SegmentedToVirtual(&gPlayerAnim_link_normal_okarina_start) = gExalinAdultSkel_okarina_startAnim;
         *(LinkAnimationHeader*)Lib_SegmentedToVirtual(&gPlayerAnim_link_normal_okarina_swing) = gExalinAdultSkel_okarina_swingAnim;
@@ -243,7 +323,331 @@ void updateLink(PlayState* play) {
 
 
 
+extern Gfx gGiKokiriSwordGuardDL[];
+extern Gfx gGiKokiriSwordBladeHiltDL[];
+extern Gfx gGiRazorSwordDL[];
+extern Gfx gGiGildedSwordDL[];
+extern Gfx gGiGreatFairysSwordHiltEmblemDL[];
+extern Gfx gGiGreatFairysSwordBladeDL[];
+
+extern Gfx gGiHerosShieldDL[];
+extern Gfx gGiHerosShieldEmblemDL[];
+extern Gfx gGiMirrorShieldDL[];
+
+extern Gfx gGiOcarinaOfTimeDL[];
+extern Gfx gGiOcarinaOfTimeHolesDL[];
+
+extern Gfx gGiPostmanHatBunnyLogoDL[];
+extern Gfx gGiPostmanHatCapDL[];
+
+extern Gfx gGiBunnyHoodDL[];
+extern Gfx gGiBunnyHoodEyesDL[];
+
 RECOMP_CALLBACK("*", recomp_on_play_main)
 void mainUpdate(PlayState* play) {
     updateLink(play);
 }
+
+MODEL_REPLACER_CALLBACK_ON_REGISTER_REPLACERS void registerExalinGiModels() {
+
+    //swords
+    ModelReplacerHandle exalinGiSwordKokiri = ModelReplacer_registerReplacer(OBJECT_GI_SWORD_1, gGiKokiriSwordBladeHiltDL, gGiExalinSword1DL);
+    ModelReplacerHandle exalinGiSwordKokiri2 = ModelReplacer_registerReplacer(OBJECT_GI_SWORD_1, gGiKokiriSwordGuardDL, gGiCull);
+    ModelReplacerHandle exalinGiSwordRazor = ModelReplacer_registerReplacer(OBJECT_GI_SWORD_2, gGiRazorSwordDL, gGiExalinSword2DL);
+    ModelReplacerHandle exalinGiSwordGilded = ModelReplacer_registerReplacer(OBJECT_GI_SWORD_3, gGiGildedSwordDL, gGiExalinSword3DL);
+    ModelReplacerHandle exalinGiSwordFairy = ModelReplacer_registerReplacer(OBJECT_GI_SWORD_4, gGiGreatFairysSwordBladeDL, gGiExalinSword4DL);
+    ModelReplacerHandle exalinGiSwordFairy2 = ModelReplacer_registerReplacer(OBJECT_GI_SWORD_4, gGiGreatFairysSwordHiltEmblemDL, gGiCull);
+    
+    ModelReplacer_setReplacerModel(exalinGiSwordKokiri, gGiExalinSword1DL);
+    ModelReplacer_setReplacerModel(exalinGiSwordKokiri2, gGiCull);
+    ModelReplacer_setReplacerModel(exalinGiSwordRazor, gGiExalinSword2DL);
+    ModelReplacer_setReplacerModel(exalinGiSwordGilded, gGiExalinSword3DL);
+    ModelReplacer_setReplacerModel(exalinGiSwordFairy, gGiExalinSword4DL);
+    ModelReplacer_setReplacerModel(exalinGiSwordFairy2, gGiCull);
+
+    //shields
+    ModelReplacerHandle exalinGiShieldHero = ModelReplacer_registerReplacer(OBJECT_GI_SHIELD_2, gGiHerosShieldDL, gGiExalinSword3DL);
+    ModelReplacerHandle exalinGiShieldHero2 = ModelReplacer_registerReplacer(OBJECT_GI_SHIELD_2, gGiHerosShieldEmblemDL, gGiCull);
+    ModelReplacerHandle exalinGiShieldMirror = ModelReplacer_registerReplacer(OBJECT_GI_SHIELD_3, gGiMirrorShieldDL, gGiExalinSword3DL);
+    
+    ModelReplacer_setReplacerModel(exalinGiShieldHero, gGiExalinSword3DL);
+    ModelReplacer_setReplacerModel(exalinGiShieldHero2, gGiCull);
+    ModelReplacer_setReplacerModel(exalinGiShieldMirror, gGiExalinSword3DL);
+
+    //ocarina
+    ModelReplacerHandle exalinGiOcarina = ModelReplacer_registerReplacer(OBJECT_GI_OCARINA, gGiOcarinaOfTimeDL, gGiOcarinaDL);
+    ModelReplacerHandle exalinGiOcarina2 = ModelReplacer_registerReplacer(OBJECT_GI_OCARINA, gGiOcarinaOfTimeHolesDL, gGiCull);
+    
+    ModelReplacer_setReplacerModel(exalinGiOcarina, gGiOcarinaDL);
+    ModelReplacer_setReplacerModel(exalinGiOcarina2, gGiCull);
+
+    //masks
+    ModelReplacerHandle exalinGiMaskPost = ModelReplacer_registerReplacer(OBJECT_GI_MASK12, gGiPostmanHatCapDL, gGiExalinFisher);
+    ModelReplacerHandle exalinGiMaskPost2 = ModelReplacer_registerReplacer(OBJECT_GI_MASK12, gGiPostmanHatBunnyLogoDL, gGiCull);
+
+    ModelReplacerHandle exalinGiMaskHood = ModelReplacer_registerReplacer(OBJECT_GI_RABIT_MASK, gGiBunnyHoodDL, gGiExalinHood);
+    ModelReplacerHandle exalinGiMaskHood2 = ModelReplacer_registerReplacer(OBJECT_GI_RABIT_MASK, gGiBunnyHoodEyesDL, gGiCull);
+
+    ModelReplacer_setReplacerModel(exalinGiMaskPost, gGiExalinFisher);
+    ModelReplacer_setReplacerModel(exalinGiMaskHood, gGiExalinHood);
+    
+    ModelReplacer_setReplacerModel(exalinGiMaskPost2, gGiCull);
+    ModelReplacer_setReplacerModel(exalinGiMaskHood2, gGiCull);
+}
+
+
+u8 gPushedHeadMatrix;
+bool exalinHoodOn;
+
+RECOMP_HOOK("Player_DrawBunnyHood") void on_Player_DrawBunnyHood(PlayState* play) {
+    Player* player = GET_PLAYER(play);
+    exalinHoodOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinHoodHandle);
+
+    if (exalinHoodOn){
+        OPEN_DISPS(play->state.gfxCtx);
+    
+        Matrix_Push();
+        gPushedHeadMatrix++;
+        MATRIX_FINALIZE_AND_LOAD(POLY_OPA_DISP++, play->state.gfxCtx);
+        gSPDisplayList(POLY_OPA_DISP++, gExalinAdultHoodSkel_bone010_gLinkZoraHeadLimb_mesh_layer_Opaque);
+        //gSPDisplayList(POLY_OPA_DISP++, gExalinAdultHoodSkel_bone010_gLinkZoraHeadLimb_mesh_layer_Opaque);
+        CLOSE_DISPS(play->state.gfxCtx);
+    }
+}
+
+RECOMP_HOOK_RETURN("Player_DrawBunnyHood") void return_Player_DrawBunnyHood(void) {
+    while (gPushedHeadMatrix) {
+        Matrix_Pop();
+        gPushedHeadMatrix--;
+    }
+    gPushedHeadMatrix = 0;
+}
+
+u8 gPushedTorsoMatrix;
+Gfx* exalinDrawHood = gGiCull;
+
+bool hoodSpeedIsActive = false;
+
+RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(PlayState* play, s32 limbIndex, Gfx** dList1, Gfx** dList2, Vec3s* rot, Actor* actor) {
+    Player* player = (Player*)actor;
+    exalinHoodOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinHoodHandle);
+    
+    if (bunnyHoodTweaks == DEPENDENCY_STATUS_FOUND) {
+        hoodSpeedIsActive = BunnyHoodTweaks_isPlayerRunSpeedModified(play, player);
+        if (hoodSpeedIsActive) {
+            exalinDrawHood = gExalinAdultHoodSkel_bone020_gLinkZoraTorsoLimb_mesh_layer_Opaque;
+            if (player->stateFlags1 & PLAYER_STATE1_100000) {
+                Vec3f temp;
+                SkinMatrix_Vec3fMtxFMultXYZ(&play->viewProjectionMtxF, &player->actor.focus.pos, &temp);
+                if (temp.z < 5.0f) {
+                    exalinDrawHood = gGiCull;
+                }
+            }
+        } else {
+            exalinDrawHood = gGiCull;
+        }
+    } else {
+        if (player->currentMask == PLAYER_MASK_BUNNY) {
+            exalinDrawHood = gExalinAdultHoodSkel_bone020_gLinkZoraTorsoLimb_mesh_layer_Opaque;
+        } else {
+            exalinDrawHood = gGiCull;
+        }
+    }
+
+    if (exalinHoodOn && !player->currentMask) {
+        if (limbIndex == PLAYER_LIMB_TORSO) {
+            s32 pad;
+            OPEN_DISPS(play->state.gfxCtx);
+            Matrix_Push();
+            gPushedTorsoMatrix++;
+            Matrix_Translate(0.f, 0.F, 0.f, MTXMODE_APPLY);
+            MATRIX_FINALIZE_AND_LOAD(POLY_XLU_DISP++, play->state.gfxCtx);
+            gSPDisplayList(POLY_OPA_DISP++, exalinDrawHood);
+            CLOSE_DISPS(play->state.gfxCtx);
+        } else { 
+            gPushedTorsoMatrix = 0;
+        }
+    } else {
+        gPushedTorsoMatrix = 0;
+    }
+}
+
+RECOMP_HOOK_RETURN("Player_PostLimbDrawGameplay") void return_Player_PostLimbDrawGameplay(void) {
+    while (gPushedTorsoMatrix) {
+        Matrix_Pop();
+        gPushedTorsoMatrix--;
+    }
+    gPushedTorsoMatrix = 0;
+}
+
+//extern TexturePtr gItemIconGildedSwordTex[];
+
+//extern u64 gItemIconGildedSwordTex[];
+
+u8 gCurIconIsKokiriSword = 0;
+u8 gCurIconIsRazorSword = 0;
+u8 gCurIconIsGildedSword = 0;
+u8 gCurIconIsFairySword = 0;
+u8 gCurIconIsHeroShield = 0;
+u8 gCurIconIsMirrorShield = 0;
+u8 gCurIconIsMaskHood = 0;
+u8 gCurIconIsMaskFisher = 0;
+u8 gCurIconIsOcarina = 0;
+
+PlayState* gPlayState;
+u8 gId;
+void* gDst;
+u8 gAlreadyTranslated = 0;
+uintptr_t gTranslatedAddress;
+
+RECOMP_HOOK("CmpDma_LoadFileImpl") void on_CmpDma_LoadFileImpl(uintptr_t segmentRom, s32 id, void* dst, size_t size) {
+
+    if (!gAlreadyTranslated ) {
+        gTranslatedAddress = DmaMgr_TranslateVromToRom(SEGMENT_ROM_START(icon_item_static_yar));
+        gAlreadyTranslated = 1;
+    }
+    if (segmentRom == gTranslatedAddress) {
+        switch (id) {
+            case ITEM_SWORD_KOKIRI:
+                if (exalinKokiriSwordOn) {
+                    gCurIconIsKokiriSword = 1;
+                }
+                break;
+            case ITEM_SWORD_RAZOR:
+                if (exalinRazorSwordOn) {
+                    gCurIconIsRazorSword = 1;
+                }
+                break;
+            case ITEM_SWORD_GILDED:
+                if (exalinGildedSwordOn) {
+                    gCurIconIsGildedSword = 1;
+                }
+                break;
+            case ITEM_SWORD_GREAT_FAIRY:
+                if (exalinFairySwordOn) {
+                    gCurIconIsFairySword = 1;
+                }
+                break;
+            case ITEM_SHIELD_HERO:
+                if (exalinHeroShieldOn) {
+                    gCurIconIsHeroShield = 1;
+                }
+                break;
+            case ITEM_SHIELD_MIRROR:
+                if (exalinMirrorShieldOn) {
+                    gCurIconIsMirrorShield = 1;
+                }
+                break;
+            case ITEM_MASK_BUNNY:
+                if (exalinHoodOn) {
+                    gCurIconIsMaskHood = 1;
+                }
+                break;
+            case ITEM_MASK_POSTMAN:
+                if (exalinMaskFisherOn) {
+                    gCurIconIsMaskFisher = 1;
+                }
+                break;
+            case ITEM_OCARINA_OF_TIME:
+                if (exalinOcarinaOn) {
+                    gCurIconIsOcarina = 1;
+                }
+                break;
+        }
+    } else {
+        gCurIconIsKokiriSword = 0;
+        gCurIconIsRazorSword = 0;
+        gCurIconIsGildedSword = 0;
+        gCurIconIsFairySword = 0;
+        gCurIconIsHeroShield = 0;
+        gCurIconIsMirrorShield = 0;
+        gCurIconIsMaskHood = 0;
+        gCurIconIsMaskFisher = 0;
+        gCurIconIsOcarina = 0;
+    } 
+    gId = id;
+    gDst = dst;
+}
+
+RECOMP_HOOK_RETURN("CmpDma_LoadFileImpl") void return_CmpDma_LoadFileImpl(void) {
+    if (gCurIconIsKokiriSword && exalinKokiriSwordOn) {
+        Lib_MemCpy(gDst, gExalinIconKokiriSword_exalin_icon_kokiri_sword_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsRazorSword && exalinRazorSwordOn) {
+        Lib_MemCpy(gDst, gExalinIconRazorSword_exalin_icon_razor_sword_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsGildedSword && exalinGildedSwordOn) {
+        Lib_MemCpy(gDst, gExalinIconGildedSword_exalin_icon_gilded_sword_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsFairySword && exalinFairySwordOn) {
+        Lib_MemCpy(gDst, gExalinIconFairySword_exalin_icon_fairy_great_sword_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsHeroShield && exalinHeroShieldOn) {
+        Lib_MemCpy(gDst, gExalinIconGildedSword_exalin_icon_gilded_sword_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsMirrorShield && exalinMirrorShieldOn) {
+        Lib_MemCpy(gDst, gExalinIconGildedSword_exalin_icon_gilded_sword_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsMaskHood && exalinHoodOn) {
+        Lib_MemCpy(gDst, gExalinIconMaskHood_exalin_icon_mask_hood_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsMaskFisher && exalinMaskFisherOn) {
+        Lib_MemCpy(gDst, gExalinIconMaskFisher_exalin_icon_mask_fisher_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+    if (gCurIconIsOcarina && exalinOcarinaOn) {
+        Lib_MemCpy(gDst, gExalinIconOcarina_exalin_icon_ocarina_rgba32, ICON_ITEM_TEX_SIZE);
+    }
+
+    gCurIconIsKokiriSword = 0;
+    gCurIconIsRazorSword = 0;
+    gCurIconIsGildedSword = 0;
+    gCurIconIsFairySword = 0;
+    gCurIconIsHeroShield = 0;
+    gCurIconIsMirrorShield = 0;
+    gCurIconIsMaskHood = 0;
+    gCurIconIsMaskFisher = 0;
+    gCurIconIsOcarina = 0;
+}
+
+/*
+RECOMP_HOOK("GetItem_DrawOpa0") void on_GetItemDrawOpa0(PlayState* play, s16 drawId) {
+    s32 pad;
+
+    OPEN_DISPS(play->state.gfxCtx);
+
+    Gfx_SetupDL25_Opa(play->state.gfxCtx);
+
+    MATRIX_FINALIZE_AND_LOAD(POLY_OPA_DISP++, play->state.gfxCtx);
+    gSPDisplayList(POLY_OPA_DISP++, gGiExalinHood);
+
+    CLOSE_DISPS(play->state.gfxCtx);
+}
+
+*/
+
+
+/* how to swap dl's, etc
+
+#include "segment_symbols.h"
+DECLARE_ROM_SEGMENT(object_link_child);
+
+void* gRam;
+uintptr_t gVrom;
+RECOMP_HOOK("DmaMgr_ProcessRequest") void on_DmaMgr_RequestSync(DmaRequest* req) {
+    gRam = req->dramAddr;
+    gVrom = req->vromAddr;
+}
+
+RECOMP_HOOK_RETURN("DmaMgr_ProcessRequest") void after_dma() {
+    if (gVrom == SEGMENT_ROM_START(object_link_child)) {
+        uintptr_t old_segment_6 = gSegments[0x06];
+        gSegments[0x06] = OS_K0_TO_PHYSICAL(gRam);
+        Gfx* to_patch = Lib_SegmentedToVirtual(gLinkHumanMirrorShieldDL);
+        gSPBranchList(to_patch , gOotMirrorShield);
+        gSegments[0x06] = old_segment_6;
+    }
+    gVrom = 0;
+    gRam = NULL;
+}
+
+*/
