@@ -52,9 +52,6 @@ Player Init
 ExalinPelt* gPlayerExalinPelt = NULL;
 PlayState* gPlayStateExalinPelt = NULL;
 
-extern PlayerModelManagerHandle gExalinModelHandle;
-bool isExalin;
-
 RECOMP_HOOK("Player_Init") void on_player_init(Actor* thisx, PlayState* play) {
     if (gPlayerExalinPelt == NULL) {
         Actor_SpawnAsChildAndCutscene(&play->actorCtx, play, CUSTOM_ACTOR_EXALIN_PELT, -367.0f, 0.0f, -245.0f, 0, 0x8000, 0, 0, 0, 0, 0);
@@ -180,17 +177,6 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
         EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15, EXALINPELT_BODYPART_LIMB12, PLAYER_BODYPART_LEFT_THIGH);
 }
 
-// @ProxyMM Example spawning this actor in south clock town.
-/*
-RECOMP_HOOK("Actor_SpawnTransitionActors")
-void ExalinPelt_OnRoomLoad(PlayState* play, ActorContext* actorCtx) {
-    if (play->sceneId == SCENE_CLOCKTOWER) {
-        Actor* peltActorPtr = Actor_SpawnAsChildAndCutscene(&play->actorCtx, play, CUSTOM_ACTOR_EXALIN_PELT, -367.0f, 0.0f, -245.0f, 0, 0x8000, 0, 0, 0, 0, 0);
-        recomp_printf("pelt actor: %x\n", peltActorPtr);
-    }
-}
-*/
-
 void ExalinPelt_Destroy(Actor* thisx, PlayState* play) {
     ExalinPelt* this = (ExalinPelt*)thisx;
 
@@ -203,9 +189,6 @@ void ExalinPelt_Destroy(Actor* thisx, PlayState* play) {
 ExalinPelt Update
 =================
 */
-
-// OLD - Vec3f waist_globalPos = { (f32)0, (f32)0, (f32)0 };  // Global position of player's waist limb
-// OLD - Vec3s waist_rotate = {0, 0, 0};                      // Rotation value for player's waist (with parent limbs' rotations included)
 
 PosRot peltRoot = {0};
 PosRot peltWaist = {0};
@@ -313,14 +296,6 @@ void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply
     newRootJointRot.z = bodyPartRotOffset.x + bodyPartPosRot.rot.x;
     Math_Vec3s_Copy(&this->skelAnime.jointTable[bodyPartRoot+1], &newRootJointRot);
 
-    /*
-    Vec3s newRootJointRot = { 0, 0, 0};
-    newRootJointRot.x = 32768 + bodyPartPosRot.rot.z;
-    newRootJointRot.y = -16384 + bodyPartPosRot.rot.y - this->actor.shape.rot.y;
-    newRootJointRot.z = 32768 + bodyPartPosRot.rot.x;
-    Math_Vec3s_Copy(&this->skelAnime.jointTable[EXALINPELT_BODYPART_LIMB7], &newRootJointRot);
-    */
-
     // BodyPartsPos Rest of the limbs
     for (int i = chainStart; i < chainEnd; i++) {
         if (gPhysLimbs[i]->pinned == 1) {
@@ -357,6 +332,7 @@ void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply
             //       due to the codebase relying on player->actor.velocity for player's world velocity. This works 
             //       for most cases EXCEPT when player is riding on Epona, where player->actor.velocity might be 
             //       saving the player's last frame's world velocity. 
+            
             if (player->stateFlags1 & (PLAYER_STATE1_800000 | PLAYER_STATE1_200000) ||
                 player->actionFunc == Player_Action_36) {
                 player_vel = (Vec3f){0.f, 0.f, 0.f};
@@ -458,12 +434,19 @@ Player Draw
 =================
 */
 
+extern bool isExalin;
+extern bool isExalinVanillaSheath;
+extern PlayerModelManagerHandle gExalinModelHandle;
+extern PlayerModelManagerHandle gExalinModelVanillaSheathHandle;
+
 RECOMP_HOOK_RETURN ("Player_Draw") void return_Skirt_Player_Draw(void) {
     Player* player = GET_PLAYER(gPlayStateExalinPelt);
 
+    // Check if Exalin's model is set before drawing
     isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
+    isExalinVanillaSheath = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelVanillaSheathHandle);
 
-    if (!isExalin || gPlayerExalinPelt == NULL || gPlayStateExalinPelt == NULL) {
+    if (!(isExalin || isExalinVanillaSheath) || gPlayerExalinPelt == NULL || gPlayStateExalinPelt == NULL) {
         return;
     }
     
@@ -472,7 +455,7 @@ RECOMP_HOOK_RETURN ("Player_Draw") void return_Skirt_Player_Draw(void) {
     Vec3s rotOffsetThighL = {(s16)0, (s16)-16384, (s16)0};
     
 
-    if (isExalin && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
+    if ((isExalin || isExalinVanillaSheath) && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = gPlayerExalinPelt;
 
         // Calculate Force
@@ -509,8 +492,9 @@ void ExalinPelt_Draw(Actor* thisx, PlayState* play) {
     Player* player = GET_PLAYER(play);
 
     isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
+    isExalinVanillaSheath = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelVanillaSheathHandle);
 
-    if (isExalin && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
+    if ((isExalin || isExalinVanillaSheath) && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = (ExalinPelt*)thisx;
 
         OPEN_DISPS(play->state.gfxCtx);

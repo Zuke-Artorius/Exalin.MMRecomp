@@ -8,7 +8,7 @@
 id = "exalin_recomp_pelt_physics"
 
 # Version of this mod.
-version = "0.0.95"
+version = "0.0.96"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Exalin"
@@ -110,3 +110,13 @@ additional_files = [
 #type = "Enum"
 #options = [ "Hide Pelt", "Show Pelt" ]
 #default = "Show Pelt"
+
+[[manifest.config_options]]
+id = "list_alternate_model"
+name = "Load Alternate Model"
+description = """
+Will display the entry in PMM for the model with a default sheath bone position.
+"""
+type = "Enum"
+options = [ "hide", "load" ]
+default = "hide"
