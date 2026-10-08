@@ -178,9 +178,6 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
 }
 
 void ExalinPelt_Destroy(Actor* thisx, PlayState* play) {
-    ExalinPelt* this = (ExalinPelt*)thisx;
-
-    recomp_printf("Pelt Destroyed\n");
     gPlayerExalinPelt = NULL;
 }
 
@@ -419,7 +416,6 @@ void ExalinPelt_RotateJoints(ExalinPelt* this, PhysBone* gPhysBones[], int chain
 RECOMP_CALLBACK("*", recomp_on_play_main)
 void mainUpdate(PlayState* play) {
     if (gPlayerExalinPelt == NULL) {
-        recomp_printf("NO PELT!");
     }
 }
 
@@ -429,7 +425,6 @@ void ExalinPelt_Update(Actor* thisx, PlayState* play) {
     // Remove ExalinPelt when player transforms from human to non-human
     if (player->transformation != PLAYER_FORM_HUMAN && gPlayerExalinPelt != NULL && player->actor.draw == NULL && (player->stateFlags2 & PLAYER_STATE2_20000000)) {
         Actor_Kill(&this->actor);
-        recomp_printf("Pelt Killed!\n");
         gPlayerExalinPelt = NULL;
         return;
     }
@@ -450,7 +445,6 @@ extern PlayerModelManagerHandle gExalinModelVanillaSheathHandle;
 RECOMP_HOOK_RETURN ("Player_Draw") void main_Draw_Pelt_with_Physics(void) {
     Player* player = GET_PLAYER(gPlayStateExalinPelt);
     PlayState* play = gPlayStateExalinPelt;
-    recomp_printf("Drawing Pelt\n");
     // Check if Exalin's model is set before drawing
     isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
     isExalinVanillaSheath = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelVanillaSheathHandle);
