@@ -60,7 +60,7 @@
 #define MASK_ROTATE_Z 0.f
 #define MASK_SCALE 1.f
 #define MASK_TRANSLATE_X -320.f
-#define MASK_TRANSLATE_Y -320.f
+#define MASK_TRANSLATE_Y -120.f
 #define MASK_TRANSLATE_Z 0.f
 
 #define SHIELD_BACK_ROTATE_X 0.f
@@ -154,8 +154,10 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
         PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_RFIST, gExalinAdultFistsSkel_bone018_gLinkZoraRightHandLimb_mesh_layer_Opaque);
     
         guPosition(&gExalinMaskMtx, MASK_ROTATE_X, MASK_ROTATE_Y, MASK_ROTATE_Z, MASK_SCALE, MASK_TRANSLATE_X, MASK_TRANSLATE_Y, MASK_TRANSLATE_Z);
+        guPosition(&gExalinArrowMtx, ARROW_ROTATE_X, ARROW_ROTATE_Y, ARROW_ROTATE_Z, ARROW_SCALE, ARROW_TRANSLATE_X, ARROW_TRANSLATE_Y, ARROW_TRANSLATE_Z);
     
         PlayerModelManager_setMatrix(exalinHumanNoMtx, PMM_MTX_MASKS, &gExalinMaskMtx);
+        PlayerModelManager_setMatrix(exalinHumanNoMtx, PMM_MTX_ARROW_DRAWN, &gExalinArrowMtx);
         
         PlayerModelManager_addHandleToPack(exalinHandle, exalinHumanNoMtx);
     }

@@ -180,6 +180,7 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
 void ExalinPelt_Destroy(Actor* thisx, PlayState* play) {
     ExalinPelt* this = (ExalinPelt*)thisx;
 
+    recomp_printf("Pelt Destroyed\n");
     gPlayerExalinPelt = NULL;
 }
 
@@ -320,7 +321,7 @@ void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply
             Math_Vec3f_Copy(&player_vel, &player->actor.velocity);
 
             u8 linkOnGround = (player->actor.bgCheckFlags & BGCHECKFLAG_GROUND);
-            if (linkOnGround) {
+            if (linkOnGround || player->stateFlags1 & PLAYER_STATE1_20000000) {
                 player_vel.y = 0.f;
             }
 
@@ -332,10 +333,9 @@ void ExalinPelt_UpdateBodyPartsPos(ExalinPelt* this, Player* player, Vec3f apply
             //       due to the codebase relying on player->actor.velocity for player's world velocity. This works 
             //       for most cases EXCEPT when player is riding on Epona, where player->actor.velocity might be 
             //       saving the player's last frame's world velocity. 
-            
             if (player->stateFlags1 & (PLAYER_STATE1_800000 | PLAYER_STATE1_200000) ||
                 player->actionFunc == Player_Action_36) {
-                player_vel = (Vec3f){0.f, 0.f, 0.f};
+                    player_vel = (Vec3f){0.f, 0.f, 0.f};
             }
 
             Verlet_LimbUpdatePos(gPhysLimbs[i], &apply_force, &player_vel);
@@ -415,13 +415,21 @@ void ExalinPelt_RotateJoints(ExalinPelt* this, PhysBone* gPhysBones[], int chain
     }
 }
 
+
+RECOMP_CALLBACK("*", recomp_on_play_main)
+void mainUpdate(PlayState* play) {
+    if (gPlayerExalinPelt == NULL) {
+        recomp_printf("NO PELT!");
+    }
+}
+
 void ExalinPelt_Update(Actor* thisx, PlayState* play) {
     Player* player = GET_PLAYER(play);
     ExalinPelt* this = (ExalinPelt*)thisx;
-    
     // Remove ExalinPelt when player transforms from human to non-human
     if (player->transformation != PLAYER_FORM_HUMAN && gPlayerExalinPelt != NULL && player->actor.draw == NULL && (player->stateFlags2 & PLAYER_STATE2_20000000)) {
         Actor_Kill(&this->actor);
+        recomp_printf("Pelt Killed!\n");
         gPlayerExalinPelt = NULL;
         return;
     }
@@ -439,9 +447,10 @@ extern bool isExalinVanillaSheath;
 extern PlayerModelManagerHandle gExalinModelHandle;
 extern PlayerModelManagerHandle gExalinModelVanillaSheathHandle;
 
-RECOMP_HOOK_RETURN ("Player_Draw") void return_Skirt_Player_Draw(void) {
+RECOMP_HOOK_RETURN ("Player_Draw") void main_Draw_Pelt_with_Physics(void) {
     Player* player = GET_PLAYER(gPlayStateExalinPelt);
-
+    PlayState* play = gPlayStateExalinPelt;
+    recomp_printf("Drawing Pelt\n");
     // Check if Exalin's model is set before drawing
     isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
     isExalinVanillaSheath = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelVanillaSheathHandle);
@@ -458,46 +467,39 @@ RECOMP_HOOK_RETURN ("Player_Draw") void return_Skirt_Player_Draw(void) {
     if ((isExalin || isExalinVanillaSheath) && gPlayerExalinPelt != NULL && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
         ExalinPelt* this = gPlayerExalinPelt;
 
-        // Calculate Force
-        Vec3f net_force = { (f32)0, (f32)0, (f32)0 };    // Gravity + movement
-        Verlet_UpdatePhysPlayerVelocity(&gExalinPhysPlayer, player);
-        Verlet_CalcNetForce(&gExalinPhysPlayer, (f32)GRAVITY, &net_force);
-
-        // Set ExalinPelt's previous position
-        Math_Vec3f_Copy(&this->actor.prevPos, &player->actor.prevPos);
-
-        // Set ExalinPelt's position and rotations
-        Math_Vec3f_Copy(&this->actor.world.pos, &peltRoot.pos);
-        Math_Vec3s_Copy(&this->actor.shape.rot, &player->actor.shape.rot);
-        this->actor.shape.rot.y += -32768;
-        Math_Vec3s_Copy(&this->actor.world.rot, &player->actor.shape.rot);
-
-        // Update ExalinPelt Limbs' positions based on Verlet Integration
-        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
-            EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7, EXALINPELT_BODYPART_LIMB1, peltWaist, rotOffsetWaist);
-        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
-            EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11, EXALINPELT_BODYPART_LIMB8, peltThighL, rotOffsetThighL);
-        ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
-            EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15, EXALINPELT_BODYPART_LIMB12, peltThighR, rotOffsetThighR);
-
-        // Calculate rotations based on exalinpelt limbs' calculated positions
-        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7);
-        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11);
-        ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15);
-    }
-}
-
-
-void ExalinPelt_Draw(Actor* thisx, PlayState* play) {
-    Player* player = GET_PLAYER(play);
-
-    isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
-    isExalinVanillaSheath = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelVanillaSheathHandle);
-
-    if ((isExalin || isExalinVanillaSheath) && player->transformation == PLAYER_FORM_HUMAN && player->actor.draw != NULL && !(player->stateFlags2 & PLAYER_STATE2_20000000)) {
-        ExalinPelt* this = (ExalinPelt*)thisx;
+        if (play->pauseCtx.state == 0) {
+            // Calculate Force
+            Vec3f net_force = { (f32)0, (f32)0, (f32)0 };    // Gravity + movement
+            Verlet_UpdatePhysPlayerVelocity(&gExalinPhysPlayer, player);
+            Verlet_CalcNetForce(&gExalinPhysPlayer, (f32)GRAVITY, &net_force);
+    
+            // Set ExalinPelt's previous position
+            Math_Vec3f_Copy(&this->actor.prevPos, &player->actor.prevPos);
+    
+            // Set ExalinPelt's position and rotations
+            Math_Vec3f_Copy(&this->actor.world.pos, &peltRoot.pos);
+            Math_Vec3s_Copy(&this->actor.shape.rot, &player->actor.shape.rot);
+            this->actor.shape.rot.y += -32768;
+            Math_Vec3s_Copy(&this->actor.world.rot, &player->actor.shape.rot);
+    
+            // Update ExalinPelt Limbs' positions based on Verlet Integration
+            ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+                EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7, EXALINPELT_BODYPART_LIMB1, peltWaist, rotOffsetWaist);
+            ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+                EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11, EXALINPELT_BODYPART_LIMB8, peltThighL, rotOffsetThighL);
+            ExalinPelt_UpdateBodyPartsPos(this, player, net_force, gExalinPeltLimbs, exalinpeltPhysLimbs, exalinpeltPhysBones, 
+                EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15, EXALINPELT_BODYPART_LIMB12, peltThighR, rotOffsetThighR);
+    
+            // Calculate rotations based on exalinpelt limbs' calculated positions
+            ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB2, EXALINPELT_BODYPART_LIMB7);
+            ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB9, EXALINPELT_BODYPART_LIMB11);
+            ExalinPelt_RotateJoints(this, exalinpeltPhysBones, EXALINPELT_BODYPART_LIMB13, EXALINPELT_BODYPART_LIMB15);
+        }
 
         OPEN_DISPS(play->state.gfxCtx);
+        Matrix_SetTranslateRotateYXZ(this->actor.world.pos.x, this->actor.world.pos.y, this->actor.world.pos.z, 
+            &this->actor.shape.rot);
+        Matrix_Scale(this->actor.scale.x, this->actor.scale.y, this->actor.scale.z, MTXMODE_APPLY);
         Gfx_SetupDL25_Opa(play->state.gfxCtx);
         func_80122868(play, player);    // Draw blinking effect of exalinpelt when player gets hit or jinxed
         SkelAnime_DrawFlexOpa(
@@ -517,4 +519,9 @@ void ExalinPelt_Draw(Actor* thisx, PlayState* play) {
 
         CLOSE_DISPS(play->state.gfxCtx);
     }
+}
+
+
+void ExalinPelt_Draw(Actor* thisx, PlayState* play) {
+
 }
