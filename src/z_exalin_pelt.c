@@ -114,8 +114,6 @@ void ExalinPelt_Init(Actor* thisx, PlayState* play) {
     gPlayStateExalinPelt = play;
 
     // Capture default jointPos
-    // I can't think of any way aside from hardcoding, because the standardlimbs' jointPos values
-    // keep getting updated based on its last jointPos values before map reloads.
     // Values are directly copied from the generated Fast64 model file (in my case, gExalinPeltSkel.c)
     Vec3s limb1_jointPos =  { 0, 0, 0 };
     Vec3s limb2_jointPos =  { 0, 50, 0 };

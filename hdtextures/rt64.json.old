@@ -1,0 +1,112 @@
+{
+    "configuration": {
+        "autoPath": "rt64",
+        "configurationVersion": 3,
+        "defaultOperation": "stream",
+        "defaultShift": "half",
+        "hashVersion": 5
+    },
+    "extraFiles": [],
+    "operationFilters": [],
+    "shiftFilters": [],
+    "textures": [
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "5bb20bc517f16db1"
+            },
+            "path": "exalinHood-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "0feb252d932dcc7b"
+            },
+            "path": "exalinFisher-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "b57e45940c25456c"
+            },
+            "path": "exalinGildedSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "fedc454359bff654"
+            },
+            "path": "exalinOcarina-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "475205f68567768b"
+            },
+            "path": "exalinFairyGreatSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "73fb71b7ed569c35"
+            },
+            "path": "exalinKokiriSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "a4e5b15b9c34a2d7"
+            },
+            "path": "exalinRazorSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "318a80eb6a941f4f"
+            },
+            "path": "exalinOcarina-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "ec3aa950392f9ad6"
+            },
+            "path": "exalinFairyGreatSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "a6ab7f023e9464af"
+            },
+            "path": "exalinFisher-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "0b5406d7c0fc536e"
+            },
+            "path": "exalinHood-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "14e94f63b97c66b3"
+            },
+            "path": "exalinGildedSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "72324b9ebac2a0b0"
+            },
+            "path": "exalinKokiriSword-icon"
+        },
+        {
+            "hashes": {
+                "rice": "",
+                "rt64": "6c75cb640855fa07"
+            },
+            "path": "exalinRazorSword-icon"
+        }
+    ]
+}

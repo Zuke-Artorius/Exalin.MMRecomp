@@ -170,8 +170,6 @@ typedef struct ExalinPelt {
     Vec3s morphTable[GEXALINPELTSKEL_NUM_LIMBS];
     Vec3f bodyPartsPos[EXALINPELT_BODYPART_MAX];
     ColliderJntSph collider;
-    u8 needsReset;
-    u8 needsResetShape;
 } ExalinPelt;
 
 // ExalinPelt manipulation based on Verlet Integration

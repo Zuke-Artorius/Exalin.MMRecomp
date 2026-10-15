@@ -12,6 +12,7 @@
 #include "gExalinAdultFistsSkel.h"
 #include "gExalinAdultBottleHandSkel.h"
 #include "gExalinAdultSkelVanillaSheath.h"
+#include "gExalinAdultDoubleSheathSkel.h"
 
 #include "gExTwinSword1Blade.h"
 #include "gExTwinSword1Handle.h"
@@ -25,6 +26,9 @@
 #include "gExalinSheath1.h"
 #include "gExalinSheath2.h"
 #include "gExalinSheath3.h"
+#include "gExalinSheath1_001.h"
+#include "gExalinSheath2_001.h"
+#include "gExalinSheath3_001.h"
 
 #include "gExShieldDeku.h"
 #include "gExShieldHero.h"
@@ -35,6 +39,8 @@
 #include "gExalinFisher.h"
 #include "gExalinHood.h"
 #include "gExalinAdultHoodSkel.h"
+
+#include "gExalinElegyShellHumanDL.h"
 
 #include "gi/gGiCull.h"
 #include "gi/gGiExalinSword1DL.h"
@@ -117,6 +123,9 @@ PlayerModelManagerHandle gExalinModelVanillaSheathHandle;
 PlayerModelManagerHandle gExalinKokiriSwordHandle;
 PlayerModelManagerHandle gExalinRazorSwordHandle;
 PlayerModelManagerHandle gExalinGildedSwordHandle;
+PlayerModelManagerHandle gExalinKokiriSwordShieldHandle;
+PlayerModelManagerHandle gExalinRazorSwordShieldHandle;
+PlayerModelManagerHandle gExalinGildedSwordShieldHandle;
 PlayerModelManagerHandle gExalinFairySwordHandle;
 PlayerModelManagerHandle gExalinHeroShieldHandle;
 PlayerModelManagerHandle gExalinMirrorShieldHandle;
@@ -131,40 +140,40 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
 
     DependencyStatus bunnyHoodTweaks = recomp_is_dependency_met("yazmt_mm_bunnyhoodtweaks");
 
-    PlayerModelManagerHandle exalinHandle = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_pack", PMM_MODEL_TYPE_MODEL_PACK);
-    PlayerModelManager_setAuthor(exalinHandle, "Zuke");
-    PlayerModelManager_setDisplayName(exalinHandle, "Exalin");
+    PlayerModelManagerHandle exalinDualHandle = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_dual_pack", PMM_MODEL_TYPE_MODEL_PACK);
+    PlayerModelManager_setAuthor(exalinDualHandle, "Zuke");
+    PlayerModelManager_setDisplayName(exalinDualHandle, "Exalin - Dual Wield");
 
-    u32 alternateModelEntry = recomp_get_config_u32("list_alternate_model");
+    PlayerModelManagerHandle exalinShieldHandle = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_shield_pack", PMM_MODEL_TYPE_MODEL_PACK);
+    PlayerModelManager_setAuthor(exalinShieldHandle, "Zuke");
+    PlayerModelManager_setDisplayName(exalinShieldHandle, "Exalin - Sword & Shield");
 
-    if (alternateModelEntry) {
-        PlayerModelManagerHandle exalinHumanNoMtx = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_human_no_mtx", PMM_MODEL_TYPE_ADULT);
-        PlayerModelManager_setAuthor(exalinHumanNoMtx, "Zuke");
-        PlayerModelManager_setDisplayName(exalinHumanNoMtx, "Exalin - No Mtx");
+    PlayerModelManagerHandle exalinHumanNoMtx = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_human_no_mtx", PMM_MODEL_TYPE_ADULT);
+    PlayerModelManager_setAuthor(exalinHumanNoMtx, "Zuke");
+    PlayerModelManager_setDisplayName(exalinHumanNoMtx, "Exalin - Sword & Shield");
+
+    gExalinModelVanillaSheathHandle = exalinHumanNoMtx;
+
+    PlayerModelManager_setEyesTextures(exalinHumanNoMtx, gExalinEyeR);
+    PlayerModelManager_setMouthTextures(exalinHumanNoMtx, gExalinMouth);
+
+    PlayerModelManager_setSkeleton(exalinHumanNoMtx, &gExalinAdultSkelVanillaSheath);
+
+    PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_LHAND_BOTTLE, gExalinAdultBottleHandSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque);
+    PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_LFIST, gExalinAdultFistsSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque);
+    PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_RFIST, gExalinAdultFistsSkel_bone018_gLinkZoraRightHandLimb_mesh_layer_Opaque);
+
+    guPosition(&gExalinMaskMtx, MASK_ROTATE_X, MASK_ROTATE_Y, MASK_ROTATE_Z, MASK_SCALE, MASK_TRANSLATE_X, MASK_TRANSLATE_Y, MASK_TRANSLATE_Z);
+    guPosition(&gExalinArrowMtx, ARROW_ROTATE_X, ARROW_ROTATE_Y, ARROW_ROTATE_Z, ARROW_SCALE, ARROW_TRANSLATE_X, ARROW_TRANSLATE_Y, ARROW_TRANSLATE_Z);
+
+    PlayerModelManager_setMatrix(exalinHumanNoMtx, PMM_MTX_MASKS, &gExalinMaskMtx);
+    PlayerModelManager_setMatrix(exalinHumanNoMtx, PMM_MTX_ARROW_DRAWN, &gExalinArrowMtx);
     
-        gExalinModelVanillaSheathHandle = exalinHumanNoMtx;
-    
-        PlayerModelManager_setEyesTextures(exalinHumanNoMtx, gExalinEyeR);
-        PlayerModelManager_setMouthTextures(exalinHumanNoMtx, gExalinMouth);
-    
-        PlayerModelManager_setSkeleton(exalinHumanNoMtx, &gExalinAdultSkelVanillaSheath);
-    
-        PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_LHAND_BOTTLE, gExalinAdultBottleHandSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque);
-        PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_LFIST, gExalinAdultFistsSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque);
-        PlayerModelManager_setDisplayList(exalinHumanNoMtx, PMM_DL_RFIST, gExalinAdultFistsSkel_bone018_gLinkZoraRightHandLimb_mesh_layer_Opaque);
-    
-        guPosition(&gExalinMaskMtx, MASK_ROTATE_X, MASK_ROTATE_Y, MASK_ROTATE_Z, MASK_SCALE, MASK_TRANSLATE_X, MASK_TRANSLATE_Y, MASK_TRANSLATE_Z);
-        guPosition(&gExalinArrowMtx, ARROW_ROTATE_X, ARROW_ROTATE_Y, ARROW_ROTATE_Z, ARROW_SCALE, ARROW_TRANSLATE_X, ARROW_TRANSLATE_Y, ARROW_TRANSLATE_Z);
-    
-        PlayerModelManager_setMatrix(exalinHumanNoMtx, PMM_MTX_MASKS, &gExalinMaskMtx);
-        PlayerModelManager_setMatrix(exalinHumanNoMtx, PMM_MTX_ARROW_DRAWN, &gExalinArrowMtx);
-        
-        PlayerModelManager_addHandleToPack(exalinHandle, exalinHumanNoMtx);
-    }
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinHumanNoMtx);
 
     PlayerModelManagerHandle exalinHuman = PLAYERMODELMANAGER_REGISTER_MODEL("pmm_exalin_human", PMM_MODEL_TYPE_ADULT);
     PlayerModelManager_setAuthor(exalinHuman, "Zuke");
-    PlayerModelManager_setDisplayName(exalinHuman, "Exalin");
+    PlayerModelManager_setDisplayName(exalinHuman, "Exalin - Dual Wield");
 
     gExalinModelHandle = exalinHuman;
 
@@ -172,10 +181,13 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setMouthTextures(exalinHuman, gExalinMouth);
 
     PlayerModelManager_setSkeleton(exalinHuman, &gExalinAdultSkel);
+//    PlayerModelManager_setSkeleton(exalinHuman, &gExalinAdultDoubleSheathSkel);
 
     PlayerModelManager_setDisplayList(exalinHuman, PMM_DL_LHAND_BOTTLE, gExalinAdultBottleHandSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque);
     PlayerModelManager_setDisplayList(exalinHuman, PMM_DL_LFIST, gExalinAdultFistsSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque);
     PlayerModelManager_setDisplayList(exalinHuman, PMM_DL_RFIST, gExalinAdultFistsSkel_bone018_gLinkZoraRightHandLimb_mesh_layer_Opaque);
+
+    PlayerModelManager_setDisplayList(exalinHuman, PMM_DL_ELEGY_OF_EMPTINESS_SHELL, gExalinElegyShellHumanDL);
 
     guPosition(&gExalinMaskMtx, MASK_ROTATE_X, MASK_ROTATE_Y, MASK_ROTATE_Z, MASK_SCALE, MASK_TRANSLATE_X, MASK_TRANSLATE_Y, MASK_TRANSLATE_Z);
     guPosition(&gExalinShieldMtx, SHIELD_BACK_ROTATE_X, SHIELD_BACK_ROTATE_Y, SHIELD_BACK_ROTATE_Z, SHIELD_BACK_SCALE, SHIELD_BACK_TRANSLATE_X, SHIELD_BACK_TRANSLATE_Y, SHIELD_BACK_TRANSLATE_Z);
@@ -191,78 +203,115 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_MASKS, &gExalinMaskMtx);
     PlayerModelManager_setMatrix(exalinHuman, PMM_MTX_ARROW_DRAWN, &gExalinArrowMtx);
     
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinHuman);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinHuman);
 
     PlayerModelManagerHandle exalinSwordKokiri = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_kokiri_pmm", PMM_MODEL_TYPE_SWORD_KOKIRI);
     PlayerModelManager_setAuthor(exalinSwordKokiri, "Zuke");
-    PlayerModelManager_setDisplayName(exalinSwordKokiri, "Exalin");
+    PlayerModelManager_setDisplayName(exalinSwordKokiri, "Exalin - Dual Wield");
     PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_BLADE, gExTwinSword1Blade);
     PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_HILT, gExTwinSword1Handle);
     PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_SHEATH, gExalinSheath1);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordKokiri);
+//    PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_SHEATH, gExalinDoubleSheath1);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordKokiri);
     gExalinKokiriSwordHandle = exalinSwordKokiri;
+
+    PlayerModelManagerHandle exalinSwordKokiriShield = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_kokiri_shield_pmm", PMM_MODEL_TYPE_SWORD_KOKIRI);
+    PlayerModelManager_setAuthor(exalinSwordKokiriShield, "Zuke");
+    PlayerModelManager_setDisplayName(exalinSwordKokiriShield, "Exalin - Sword & Shield");
+    PlayerModelManager_setDisplayList(exalinSwordKokiriShield, PMM_DL_SWORD_KOKIRI_BLADE, gExTwinSword1Blade);
+    PlayerModelManager_setDisplayList(exalinSwordKokiriShield, PMM_DL_SWORD_KOKIRI_HILT, gExTwinSword1Handle);
+    PlayerModelManager_setDisplayList(exalinSwordKokiriShield, PMM_DL_SWORD_KOKIRI_SHEATH, gExalinSheath1_001);
+//    PlayerModelManager_setDisplayList(exalinSwordKokiriShield, PMM_DL_SWORD_KOKIRI_SHEATH, gExalinDoubleSheath1);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinSwordKokiriShield);
+    gExalinKokiriSwordShieldHandle = exalinSwordKokiriShield;
 
     PlayerModelManagerHandle exalinSwordRazor = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_razor_pmm", PMM_MODEL_TYPE_SWORD_RAZOR);
     PlayerModelManager_setAuthor(exalinSwordRazor, "Zuke");
-    PlayerModelManager_setDisplayName(exalinSwordRazor, "Exalin");
+    PlayerModelManager_setDisplayName(exalinSwordRazor, "Exalin - Dual Wield");
     PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_BLADE, gExTwinSword2Blade);
     PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_HILT, gExTwinSword2Handle);
     PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_SHEATH, gExalinSheath2);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordRazor);
+//    PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_SHEATH, gExalinDoubleSheath2);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordRazor);
     gExalinRazorSwordHandle = exalinSwordRazor;
+
+    PlayerModelManagerHandle exalinSwordRazorShield = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_razor_shield_pmm", PMM_MODEL_TYPE_SWORD_RAZOR);
+    PlayerModelManager_setAuthor(exalinSwordRazorShield, "Zuke");
+    PlayerModelManager_setDisplayName(exalinSwordRazorShield, "Exalin - Sword & Shield");
+    PlayerModelManager_setDisplayList(exalinSwordRazorShield, PMM_DL_SWORD_RAZOR_BLADE, gExTwinSword2Blade);
+    PlayerModelManager_setDisplayList(exalinSwordRazorShield, PMM_DL_SWORD_RAZOR_HILT, gExTwinSword2Handle);
+    PlayerModelManager_setDisplayList(exalinSwordRazorShield, PMM_DL_SWORD_RAZOR_SHEATH, gExalinSheath2_001);
+//    PlayerModelManager_setDisplayList(exalinSwordRazorShield, PMM_DL_SWORD_RAZOR_SHEATH, gExalinDoubleSheath2);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinSwordRazorShield);
+    gExalinRazorSwordShieldHandle = exalinSwordRazorShield;
 
     PlayerModelManagerHandle exalinSwordGilded = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_gilded_pmm", PMM_MODEL_TYPE_SWORD_GILDED);
     PlayerModelManager_setAuthor(exalinSwordGilded, "Zuke");
-    PlayerModelManager_setDisplayName(exalinSwordGilded, "Exalin");
+    PlayerModelManager_setDisplayName(exalinSwordGilded, "Exalin - Dual Wield");
     PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_BLADE, gExTwinSword3Blade);
     PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_HILT, gExTwinSword3Handle);
     PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordGilded);
+//    PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_SHEATH, gExalinDoubleSheath3);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordGilded);
     gExalinGildedSwordHandle = exalinSwordGilded;
+
+    PlayerModelManagerHandle exalinSwordGildedShield = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_gilded_shield_pmm", PMM_MODEL_TYPE_SWORD_GILDED);
+    PlayerModelManager_setAuthor(exalinSwordGildedShield, "Zuke");
+    PlayerModelManager_setDisplayName(exalinSwordGildedShield, "Exalin - Sword & Shield");
+    PlayerModelManager_setDisplayList(exalinSwordGildedShield, PMM_DL_SWORD_GILDED_BLADE, gExTwinSword3Blade);
+    PlayerModelManager_setDisplayList(exalinSwordGildedShield, PMM_DL_SWORD_GILDED_HILT, gExTwinSword3Handle);
+    PlayerModelManager_setDisplayList(exalinSwordGildedShield, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3_001);
+//    PlayerModelManager_setDisplayList(exalinSwordGildedShield, PMM_DL_SWORD_GILDED_SHEATH, gExalinDoubleSheath3);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinSwordGildedShield);
+    gExalinGildedSwordShieldHandle = exalinSwordGildedShield;
 
     PlayerModelManagerHandle exalinSwordFairy = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_sword_fairy_pmm", PMM_MODEL_TYPE_SWORD_GREAT_FAIRY);
     PlayerModelManager_setAuthor(exalinSwordFairy, "Zuke");
     PlayerModelManager_setDisplayName(exalinSwordFairy, "Exalin");
     PlayerModelManager_setDisplayList(exalinSwordFairy, PMM_DL_SWORD_GREAT_FAIRY_BLADE, gExGreatSwordBlade);
     PlayerModelManager_setDisplayList(exalinSwordFairy, PMM_DL_SWORD_GREAT_FAIRY_HILT, gExGreatSwordHilt);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinSwordFairy);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordFairy);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinSwordFairy);
     gExalinFairySwordHandle = exalinSwordFairy;
 
     PlayerModelManagerHandle exalinShieldHero = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_hero_pmm", PMM_MODEL_TYPE_SHIELD_HERO);
     PlayerModelManager_setAuthor(exalinShieldHero, "Zuke");
-    PlayerModelManager_setDisplayName(exalinShieldHero, "Exalin");
+    PlayerModelManager_setDisplayName(exalinShieldHero, "Exalin - Dual Wield");
     PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SHIELD_HERO, gExShieldMirror);
     //PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3DL);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinShieldHero);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinShieldHero);
     gExalinHeroShieldHandle = exalinShieldHero;
 
     PlayerModelManagerHandle exalinShieldMirror = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_mirror_pmm", PMM_MODEL_TYPE_SHIELD_MIRROR);
     PlayerModelManager_setAuthor(exalinShieldMirror, "Zuke");
-    PlayerModelManager_setDisplayName(exalinShieldMirror, "Exalin");
+    PlayerModelManager_setDisplayName(exalinShieldMirror, "Exalin - Dual Wield");
     PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SHIELD_MIRROR, gExShieldMirror);
     //PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3DL);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinShieldMirror);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinShieldMirror);
     gExalinMirrorShieldHandle = exalinShieldMirror;
 
     PlayerModelManagerHandle exalinOcarina = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_ocarina_pmm", PMM_MODEL_TYPE_OCARINA_TIME);
     PlayerModelManager_setAuthor(exalinOcarina, "Zuke");
     PlayerModelManager_setDisplayName(exalinOcarina, "Exalin");
     PlayerModelManager_setDisplayList(exalinOcarina, PMM_DL_OCARINA_TIME, gOcarinaDL);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinOcarina);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinOcarina);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinOcarina);
     gExalinOcarinaHandle = exalinOcarina;
 
     PlayerModelManagerHandle exalinHood = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_hood_pmm", PMM_MODEL_TYPE_MASK_BUNNY);
     PlayerModelManager_setAuthor(exalinHood, "Zuke");
     PlayerModelManager_setDisplayName(exalinHood, "Exalin");
     PlayerModelManager_setDisplayList(exalinHood, PMM_DL_MASK_BUNNY, gGiCull);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinHood);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinHood);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinHood);
     gExalinHoodHandle = exalinHood;
 
     PlayerModelManagerHandle exalinFisher = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_fisher_pmm", PMM_MODEL_TYPE_MASK_POSTMAN);
     PlayerModelManager_setAuthor(exalinFisher, "Zuke");
     PlayerModelManager_setDisplayName(exalinFisher, "Exalin");
     PlayerModelManager_setDisplayList(exalinFisher, PMM_DL_MASK_POSTMAN, gExalinFisher);
-    PlayerModelManager_addHandleToPack(exalinHandle, exalinFisher);
+    PlayerModelManager_addHandleToPack(exalinDualHandle, exalinFisher);
+    PlayerModelManager_addHandleToPack(exalinShieldHandle, exalinFisher);
     gExalinMaskFisherHandle = exalinFisher;
 }
 
@@ -330,6 +379,9 @@ extern LinkAnimationHeader gPlayerAnim_clink_normal_okarina_walkB[];
 bool exalinKokiriSwordOn;
 bool exalinRazorSwordOn;
 bool exalinGildedSwordOn;
+bool exalinKokiriSwordShieldOn;
+bool exalinRazorSwordShieldOn;
+bool exalinGildedSwordShieldOn;
 bool exalinFairySwordOn;
 bool exalinHeroShieldOn;
 bool exalinMirrorShieldOn;
@@ -345,6 +397,9 @@ RECOMP_HOOK("PlayerAnimation_Update") s32 on_PlayerAnimation_Update(struct PlayS
     exalinKokiriSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinKokiriSwordHandle);
     exalinRazorSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinRazorSwordHandle);
     exalinGildedSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinGildedSwordHandle);
+    exalinKokiriSwordShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinKokiriSwordShieldHandle);
+    exalinRazorSwordShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinRazorSwordShieldHandle);
+    exalinGildedSwordShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinGildedSwordShieldHandle);
     exalinFairySwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinFairySwordHandle);
     exalinHeroShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinHeroShieldHandle);
     exalinMirrorShieldOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinMirrorShieldHandle);
@@ -577,17 +632,17 @@ RECOMP_HOOK("CmpDma_LoadFileImpl") void on_CmpDma_LoadFileImpl(uintptr_t segment
     if (segmentRom == gTranslatedAddress) {
         switch (id) {
             case ITEM_SWORD_KOKIRI:
-                if (exalinKokiriSwordOn) {
+                if (exalinKokiriSwordOn || exalinKokiriSwordShieldOn) {
                     gCurIconIsKokiriSword = 1;
                 }
                 break;
             case ITEM_SWORD_RAZOR:
-                if (exalinRazorSwordOn) {
+                if (exalinRazorSwordOn || exalinRazorSwordShieldOn) {
                     gCurIconIsRazorSword = 1;
                 }
                 break;
             case ITEM_SWORD_GILDED:
-                if (exalinGildedSwordOn) {
+                if (exalinGildedSwordOn || exalinGildedSwordShieldOn) {
                     gCurIconIsGildedSword = 1;
                 }
                 break;
@@ -638,13 +693,13 @@ RECOMP_HOOK("CmpDma_LoadFileImpl") void on_CmpDma_LoadFileImpl(uintptr_t segment
 }
 
 RECOMP_HOOK_RETURN("CmpDma_LoadFileImpl") void return_CmpDma_LoadFileImpl(void) {
-    if (gCurIconIsKokiriSword && exalinKokiriSwordOn) {
+    if (gCurIconIsKokiriSword && (exalinKokiriSwordOn || exalinKokiriSwordShieldOn)) {
         Lib_MemCpy(gDst, gExalinIconKokiriSword_exalin_icon_kokiri_sword_rgba32, ICON_ITEM_TEX_SIZE);
     }
-    if (gCurIconIsRazorSword && exalinRazorSwordOn) {
+    if (gCurIconIsRazorSword && (exalinRazorSwordOn || exalinRazorSwordShieldOn)) {
         Lib_MemCpy(gDst, gExalinIconRazorSword_exalin_icon_razor_sword_rgba32, ICON_ITEM_TEX_SIZE);
     }
-    if (gCurIconIsGildedSword && exalinGildedSwordOn) {
+    if (gCurIconIsGildedSword && (exalinGildedSwordOn || exalinGildedSwordShieldOn)) {
         Lib_MemCpy(gDst, gExalinIconGildedSword_exalin_icon_gilded_sword_rgba32, ICON_ITEM_TEX_SIZE);
     }
     if (gCurIconIsFairySword && exalinFairySwordOn) {

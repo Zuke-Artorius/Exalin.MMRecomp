@@ -8,22 +8,30 @@
 id = "exalin_recomp_pelt_physics"
 
 # Version of this mod.
-version = "0.0.97"
+version = "1.0.0"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
-display_name = "Exalin"
+display_name = "Exalin - Dragon Quest X"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
 This is a custom model of Exalin.
 
-This mod features physics derived from Metalhead's work.
-Thanks Metalhead!
+Includes an offhand weapon for Zuke's Dual Wield mod.
+
+Toggleable HD Item Icons
+
+This mod features physics derived from Bigmetalhead12's work.
+namely the ponytail from Jackie Quilt version 1.0.6. 
+
+Special thanks to Bigmetalhead12 for bug fixes.
+
+Mod icon by MunchieZ
 """
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
-short_description = "See you next timezone!"
+short_description = "Have a fantastic timezone!"
 
 # Authors of this mod.
 authors = [ "Exalin, Zuke" ]
@@ -71,7 +79,16 @@ data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zel
 
 # Additional files to include in the mod.
 additional_files = [ 
-    "thumb.dds"
+    "thumb.dds",
+    "hdtextures/exalinKokiriSword-icon.dds",
+    "hdtextures/exalinRazorSword-icon.dds",
+    "hdtextures/exalinGildedSword-icon.dds",
+    "hdtextures/exalinFairyGreatSword-icon.dds",
+    "hdtextures/exalinOcarina-icon.dds",
+    "hdtextures/exalinHood-icon.dds",
+    "hdtextures/exalinFisher-icon.dds",
+    "hdtextures/rt64.json",
+    "hdtextures/rt64-low-mip-cache.bin",
 ]
 
 #[[manifest.config_options]]
@@ -110,13 +127,13 @@ additional_files = [
 #type = "Enum"
 #options = [ "Hide Pelt", "Show Pelt" ]
 #default = "Show Pelt"
-
+		
 [[manifest.config_options]]
-id = "list_alternate_model"
-name = "Load Alternate Model"
+id = "_recomp_texture_pack_enabled"
+name = "HD Item Icons"
 description = """
-Will display the entry in PMM for the model with a default sheath bone position.
+Togglable HD icons for Exalin's gear.
 """
 type = "Enum"
-options = [ "hide", "load" ]
-default = "hide"
+options = [ "Off", "On" ]
+default = "On"
