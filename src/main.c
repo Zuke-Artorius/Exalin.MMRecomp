@@ -14,6 +14,7 @@
 #include "skel/gExalinAdultSkelVanillaSheath.h"
 #include "skel/gExalinAdultDoubleSheathSkel.h"
 #include "skel/gExalinAdultHoodSkel.h"
+#include "skel/gExalinAdultLeftSheathSkel.h"
 
 #include "dl/gExTwinSword1Blade.h"
 #include "dl/gExTwinSword1Handle.h"
@@ -30,6 +31,19 @@
 #include "dl/gExalinSheath1_001.h"
 #include "dl/gExalinSheath2_001.h"
 #include "dl/gExalinSheath3_001.h"
+
+#include "dl/gExalinLeftSheathHandle_001.h"
+#include "dl/gExalinRightSheathHandle_001.h"
+#include "dl/gExalinLeftSheathHandle_002.h"
+#include "dl/gExalinRightSheathHandle_002.h"
+#include "dl/gExalinLeftSheathHandle_003.h"
+#include "dl/gExalinRightSheathHandle_003.h"
+#include "dl/gExalinLeftSheath_001.h"
+#include "dl/gExalinLeftSheath_002.h"
+#include "dl/gExalinLeftSheath_003.h"
+#include "dl/gExalinRightSheath_001.h"
+#include "dl/gExalinRightSheath_002.h"
+#include "dl/gExalinRightSheath_003.h"
 
 #include "dl/gExShieldDeku.h"
 #include "dl/gExShieldHero.h"
@@ -183,8 +197,8 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
         PlayerModelManager_setAuthor(exalinSwordKokiri, "Zuke");
         PlayerModelManager_setDisplayName(exalinSwordKokiri, "Exalin - Dual Wield");
         PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_BLADE, gExTwinSword1Blade);
-        PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_HILT, gExTwinSword1Handle);
-        PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_SHEATH, gExalinSheath1);
+        PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_HILT, gGiCull);
+        PlayerModelManager_setDisplayList(exalinSwordKokiri, PMM_DL_SWORD_KOKIRI_SHEATH, gGiCull);
         PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordKokiri);
         gExalinKokiriSwordHandle = exalinSwordKokiri;
 
@@ -201,8 +215,8 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
         PlayerModelManager_setAuthor(exalinSwordRazor, "Zuke");
         PlayerModelManager_setDisplayName(exalinSwordRazor, "Exalin - Dual Wield");
         PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_BLADE, gExTwinSword2Blade);
-        PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_HILT, gExTwinSword2Handle);
-        PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_SHEATH, gExalinSheath2);
+        PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_HILT, gGiCull);
+        PlayerModelManager_setDisplayList(exalinSwordRazor, PMM_DL_SWORD_RAZOR_SHEATH, gGiCull);
         PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordRazor);
         gExalinRazorSwordHandle = exalinSwordRazor;
 
@@ -219,8 +233,8 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
         PlayerModelManager_setAuthor(exalinSwordGilded, "Zuke");
         PlayerModelManager_setDisplayName(exalinSwordGilded, "Exalin - Dual Wield");
         PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_BLADE, gExTwinSword3Blade);
-        PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_HILT, gExTwinSword3Handle);
-        PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_SHEATH, gExalinSheath3);
+        PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_HILT, gGiCull);
+        PlayerModelManager_setDisplayList(exalinSwordGilded, PMM_DL_SWORD_GILDED_SHEATH, gGiCull);
         PlayerModelManager_addHandleToPack(exalinDualHandle, exalinSwordGilded);
         gExalinGildedSwordHandle = exalinSwordGilded;
 
@@ -245,14 +259,14 @@ PLAYERMODELMANAGER_CALLBACK_REGISTER_MODELS void registerBase() {
     PlayerModelManagerHandle exalinShieldHero = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_hero_pmm", PMM_MODEL_TYPE_SHIELD_HERO);
         PlayerModelManager_setAuthor(exalinShieldHero, "Zuke");
         PlayerModelManager_setDisplayName(exalinShieldHero, "Exalin - Dual Wield");
-        PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SHIELD_HERO, gExShieldMirror);
+        PlayerModelManager_setDisplayList(exalinShieldHero, PMM_DL_SHIELD_HERO, gGiCull);
         PlayerModelManager_addHandleToPack(exalinDualHandle, exalinShieldHero);
         gExalinHeroShieldHandle = exalinShieldHero;
 
     PlayerModelManagerHandle exalinShieldMirror = PLAYERMODELMANAGER_REGISTER_MODEL("mm_exalin_shield_mirror_pmm", PMM_MODEL_TYPE_SHIELD_MIRROR);
         PlayerModelManager_setAuthor(exalinShieldMirror, "Zuke");
         PlayerModelManager_setDisplayName(exalinShieldMirror, "Exalin - Dual Wield");
-        PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SHIELD_MIRROR, gExShieldMirror);
+        PlayerModelManager_setDisplayList(exalinShieldMirror, PMM_DL_SHIELD_MIRROR, gGiCull);
         PlayerModelManager_addHandleToPack(exalinDualHandle, exalinShieldMirror);
         gExalinMirrorShieldHandle = exalinShieldMirror;
 
@@ -453,16 +467,16 @@ RECOMP_CALLBACK("*", recomp_on_init) void on_init() {
     switch (bunnyHoodTweaksStatus) {
         case DEPENDENCY_STATUS_FOUND:
             bunnyHoodTweaksEnabled = true;
-            recomp_printf("Exalin: found optional dependency BunnyHoodTweaks!\n");
+            recomp_printf("[INFO] Exalin - Dragon Quest X: Found optional dependency BunnyHoodTweaks!\n");
             break;
         case DEPENDENCY_STATUS_INVALID_DEPENDENCY:
-            recomp_printf("Exalin: optional dependency BunnyHoodTweaks ID mismatch!\n");
+            recomp_printf("[INFO] Exalin - Dragon Quest X: Optional dependency BunnyHoodTweaks ID mismatch!\n");
             break;
         case DEPENDENCY_STATUS_NOT_FOUND:
-            recomp_printf("Exalin: optional dependency BunnyHoodTweaks not found\n");
+            recomp_printf("[INFO] Exalin - Dragon Quest X: Optional dependency BunnyHoodTweaks not found\n");
             break;
         case DEPENDENCY_STATUS_WRONG_VERSION:
-            recomp_printf("Exalin: optional dependency BunnyHoodTweaks version mismatch!\n");
+            recomp_printf("[INFO] Exalin - Dragon Quest X: Optional dependency BunnyHoodTweaks version mismatch!\n");
             break;
     }
 }
@@ -500,9 +514,24 @@ RECOMP_HOOK_RETURN("Player_DrawBunnyHood") void return_Player_DrawBunnyHood(void
 
 // Draw lower section of hood
 
+u8 gPushedSwordHandleMatrix;
+u8 gPushedRHShieldMatrix;
 u8 gPushedBowstringMatrix;
 u8 gPushedTorsoMatrix;
+u8 gPushedLeftSheathMatrix;
+u8 gPushedRightSheathMatrix;
 Gfx* exalinDrawHoodBot = gGiCull;
+Gfx* exalinDrawSwordHandle = gGiCull;
+Gfx* exalinDrawShieldHandle = gGiCull;
+Gfx* exalinDrawShieldBlade = gGiCull;
+Gfx* exalinDrawLeftSheath = gGiCull;
+Gfx* exalinDrawRightSheath = gGiCull;
+Gfx* exalinDrawLeftSheathHandle = gGiCull;
+Gfx* exalinDrawRightSheathHandle = gGiCull;
+bool exalinDrawLeftSheathToggle = false;
+bool exalinDrawRightSheathToggle = false;
+bool exalinDrawLeftSheathHandleToggle = false;
+bool exalinDrawRightSheathHandleToggle = false;
 
 bool hoodSpeedIsActive = false;
 
@@ -554,18 +583,48 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
     } else {
         gPushedTorsoMatrix = 0;
     }
-
+    
     isExalin = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinModelHandle);
+    EquipValueSword swordEquipValue;
+    EquipValueShield shieldEquipValue;
 
-    if (!isExalin) {
-    } else {
-        if (limbIndex == PLAYER_LIMB_RIGHT_HAND) {
-            Actor* heldActor = player->heldActor;
-            s32 pad;
-    
-            if (*dList1 != NULL) {
+    if (limbIndex == PLAYER_LIMB_LEFT_HAND) {
+        if ((player->leftHandType == PLAYER_MODELTYPE_LH_ONE_HAND_SWORD) &&
+            (player->transformation == PLAYER_FORM_HUMAN) &&
+            ((swordEquipValue = GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD),
+              swordEquipValue != EQUIP_VALUE_SWORD_NONE))) {
+                if ((exalinKokiriSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_KOKIRI) || 
+                    (exalinRazorSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_RAZOR) || 
+                    (exalinGildedSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_GILDED)) {
+                    switch (swordEquipValue) {
+                        case EQUIP_VALUE_SWORD_KOKIRI:
+                            exalinDrawSwordHandle = gExTwinSword1Handle;
+                            break;
+                        case EQUIP_VALUE_SWORD_RAZOR:
+                            exalinDrawSwordHandle = gExTwinSword2Handle;
+                            break;
+                        case EQUIP_VALUE_SWORD_GILDED:
+                            exalinDrawSwordHandle = gExTwinSword3Handle;
+                            break;
+                    }
+                    OPEN_DISPS(play->state.gfxCtx);
+                    Matrix_Push();
+                    gPushedSwordHandleMatrix++;
+                    MATRIX_FINALIZE_AND_LOAD(POLY_XLU_DISP++, play->state.gfxCtx);
+                    gSPDisplayList(POLY_OPA_DISP++, exalinDrawSwordHandle);
+                    CLOSE_DISPS(play->state.gfxCtx);
+                }
+        } else {
+            gPushedSwordHandleMatrix = 0;
+        }
+    } else if (limbIndex == PLAYER_LIMB_RIGHT_HAND) {
+        Actor* heldActor = player->heldActor;
+        s32 pad;
+        
+        if (*dList1 != NULL) {
+            if (!isExalin) {
+            } else {
                 if (player->rightHandType == PLAYER_MODELTYPE_RH_BOW) {
-    
                     OPEN_DISPS(play->state.gfxCtx);
                     Matrix_Push();
                     gPushedBowstringMatrix++;
@@ -573,12 +632,137 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                     MATRIX_FINALIZE_AND_LOAD(POLY_XLU_DISP++, play->state.gfxCtx);
                     CLOSE_DISPS(play->state.gfxCtx);
                 }
-            } else {
-                gPushedBowstringMatrix = 0;
+            }
+            if ((player->rightHandType == PLAYER_MODELTYPE_RH_SHIELD) && 
+                (player->leftHandType == PLAYER_MODELTYPE_LH_ONE_HAND_SWORD) &&
+                (player->transformation == PLAYER_FORM_HUMAN) &&
+                ((swordEquipValue = GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD),
+                swordEquipValue != EQUIP_VALUE_SWORD_NONE)) &&
+                ((shieldEquipValue = GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SHIELD),
+                shieldEquipValue != EQUIP_VALUE_SHIELD_NONE))) {
+                    if ((exalinHeroShieldOn && shieldEquipValue == EQUIP_VALUE_SHIELD_HERO) || 
+                        (exalinMirrorShieldOn && shieldEquipValue == EQUIP_VALUE_SHIELD_MIRROR)) {
+                        switch (swordEquipValue) {
+                            case EQUIP_VALUE_SWORD_KOKIRI:
+                                exalinDrawShieldHandle = gExTwinSword1Handle;
+                                exalinDrawShieldBlade = gExTwinSword1Blade;
+                                break;
+                            case EQUIP_VALUE_SWORD_RAZOR:
+                                exalinDrawShieldHandle = gExTwinSword2Handle;
+                                exalinDrawShieldBlade = gExTwinSword2Blade;
+                                break;
+                            case EQUIP_VALUE_SWORD_GILDED:
+                                exalinDrawShieldHandle = gExTwinSword3Handle;
+                                exalinDrawShieldBlade = gExTwinSword3Blade;
+                                break;
+                        }
+                        OPEN_DISPS(play->state.gfxCtx);
+                        Matrix_Push();
+                        gPushedRHShieldMatrix++;
+                        MATRIX_FINALIZE_AND_LOAD(POLY_XLU_DISP++, play->state.gfxCtx);
+                        gSPDisplayList(POLY_OPA_DISP++, exalinDrawShieldHandle);
+                        gSPDisplayList(POLY_OPA_DISP++, exalinDrawShieldBlade);
+                        CLOSE_DISPS(play->state.gfxCtx);
+                    }
             }
         } else {
             gPushedBowstringMatrix = 0;
+            gPushedRHShieldMatrix = 0;
         }
+    } else if (limbIndex == PLAYER_LIMB_SHEATH) {
+            if (player->currentShield != PLAYER_SHIELD_NONE) {
+                exalinDrawLeftSheathToggle = true;
+            } else {
+                exalinDrawLeftSheathToggle = false;
+            }
+
+            if ((player->sheathType == PLAYER_MODELTYPE_SHEATH_14) ||
+                (player->sheathType == PLAYER_MODELTYPE_SHEATH_15)) {
+                exalinDrawRightSheathHandleToggle = true;
+                if (player->currentShield != PLAYER_SHIELD_NONE) {
+                    exalinDrawLeftSheathHandleToggle = true;
+                } else {
+                    exalinDrawLeftSheathHandleToggle = false;
+                }
+            } else {
+                exalinDrawLeftSheathHandleToggle = false;
+                exalinDrawRightSheathHandleToggle = false;
+            }
+
+            if ((swordEquipValue = GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD),
+                swordEquipValue != EQUIP_VALUE_SWORD_NONE)) {
+                exalinDrawRightSheathToggle = true;
+                if ((*dList1 != NULL) && (player->transformation == PLAYER_FORM_HUMAN)) {
+                    if ((exalinKokiriSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_KOKIRI) || 
+                    (exalinRazorSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_RAZOR) || 
+                    (exalinGildedSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_GILDED)) {
+                        switch (swordEquipValue) {
+                            case EQUIP_VALUE_SWORD_KOKIRI:
+                                exalinDrawLeftSheath = gExalinLeftSheath_001;
+                                exalinDrawLeftSheathHandle = gExalinLeftSheathHandle_001;
+                                exalinDrawRightSheath = gExalinRightSheath_001;
+                                exalinDrawRightSheathHandle = gExalinRightSheathHandle_001;
+                                break;
+                            case EQUIP_VALUE_SWORD_RAZOR:
+                                exalinDrawLeftSheath = gExalinLeftSheath_002;
+                                exalinDrawLeftSheathHandle = gExalinLeftSheathHandle_002;
+                                exalinDrawRightSheath = gExalinRightSheath_002;
+                                exalinDrawRightSheathHandle = gExalinRightSheathHandle_002;
+                                break;
+                            case EQUIP_VALUE_SWORD_GILDED:
+                                exalinDrawLeftSheath = gExalinLeftSheath_003;
+                                exalinDrawLeftSheathHandle = gExalinLeftSheathHandle_003;
+                                exalinDrawRightSheath = gExalinRightSheath_003;
+                                exalinDrawRightSheathHandle = gExalinRightSheathHandle_003;
+                                break;
+                            default:
+                                exalinDrawLeftSheathToggle = false;
+                                exalinDrawLeftSheathHandleToggle = false;
+                                exalinDrawRightSheathToggle = false;
+                                exalinDrawRightSheathHandleToggle = false;
+                        }
+                    }
+                }
+            } else {
+                exalinDrawRightSheathToggle = false;
+                exalinDrawRightSheathHandleToggle = false;
+                exalinDrawLeftSheathToggle = false;
+                exalinDrawLeftSheathHandleToggle = false;
+            }
+            if (!exalinDrawLeftSheathToggle || !isExalin) {
+                exalinDrawLeftSheath = gGiCull;
+            }
+            if (!exalinDrawLeftSheathHandleToggle || !isExalin) {
+                exalinDrawLeftSheathHandle = gGiCull;
+            }
+            if (!exalinDrawRightSheathToggle || !isExalin) {
+                exalinDrawRightSheath = gGiCull;
+            }
+            if (!exalinDrawRightSheathHandleToggle || !isExalin) {
+                exalinDrawRightSheathHandle = gGiCull;
+            }
+
+            OPEN_DISPS(play->state.gfxCtx);
+            gSPDisplayList(POLY_OPA_DISP++, exalinDrawLeftSheath);
+            gSPDisplayList(POLY_OPA_DISP++, exalinDrawLeftSheathHandle);
+            gSPDisplayList(POLY_OPA_DISP++, exalinDrawRightSheath);
+            gSPDisplayList(POLY_OPA_DISP++, exalinDrawRightSheathHandle);
+            CLOSE_DISPS(play->state.gfxCtx);
+
+        if (player->actor.scale.y >= 0.0f) {
+            if ((player->rightHandType != PLAYER_MODELTYPE_RH_SHIELD) &&
+                (player->rightHandType != PLAYER_MODELTYPE_RH_FF)) {
+                static Vec3f sSheathLimbModelShieldOnBackPos = { 630.0f, 100.0f, -30.0f };
+                static Vec3s sSheathLimbModelShieldOnBackZyxRot = { 0, 0, 0x7FFF };
+
+                Matrix_TranslateRotateZYX(&sSheathLimbModelShieldOnBackPos, &sSheathLimbModelShieldOnBackZyxRot);
+                Matrix_Get(&player->shieldMf);
+            }
+        }
+    } else {
+        gPushedBowstringMatrix = 0;
+        gPushedRHShieldMatrix = 0;
+        gPushedSwordHandleMatrix = 0;
     }
 }
 
@@ -587,11 +771,21 @@ RECOMP_HOOK_RETURN("Player_PostLimbDrawGameplay") void return_Player_PostLimbDra
         Matrix_Pop();
         gPushedTorsoMatrix--;
     }
+    while (gPushedSwordHandleMatrix) {
+        Matrix_Pop();
+        gPushedSwordHandleMatrix--;
+    }
+    while (gPushedRHShieldMatrix) {
+        Matrix_Pop();
+        gPushedRHShieldMatrix--;
+    }
     while (gPushedBowstringMatrix) {
         Matrix_Pop();
         gPushedBowstringMatrix--;
     }
 
+    gPushedSwordHandleMatrix = 0;
+    gPushedRHShieldMatrix = 0;
     gPushedTorsoMatrix = 0;
     gPushedBowstringMatrix = 0;
 }

@@ -1,0 +1,16 @@
+#ifndef GEXALINLEFTSHEATHHANDLE_003_H
+#define GEXALINLEFTSHEATHHANDLE_003_H
+
+#include "ultra64.h"
+#include "global.h"
+
+extern u64 gExalinLeftSheathHandle_003_grip_a_ci8[];
+extern u64 gExalinLeftSheathHandle_003_grip_a_pal_rgba16[];
+extern Vtx gExalinLeftSheathHandle_003_gExalinLeftSheathHandle_003_mesh_layer_Opaque_vtx_cull[8];
+extern Vtx gExalinLeftSheathHandle_003_gExalinLeftSheathHandle_003_mesh_layer_Opaque_vtx_0[134];
+extern Gfx gExalinLeftSheathHandle_003_gExalinLeftSheathHandle_003_mesh_layer_Opaque_tri_0[];
+extern Gfx mat_gExalinLeftSheathHandle_003_grip_a_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinLeftSheathHandle_003_grip_a_f3d_layerOpaque[];
+extern Gfx gExalinLeftSheathHandle_003[];
+
+#endif

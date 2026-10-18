@@ -1,0 +1,64 @@
+#ifndef GEXALINRIGHTSHEATH_002_H
+#define GEXALINRIGHTSHEATH_002_H
+
+#include "ultra64.h"
+#include "global.h"
+
+extern u64 gExalinRightSheath_002_sheath_c_ci4[];
+extern u64 gExalinRightSheath_002_sheath_c_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_d_ci4[];
+extern u64 gExalinRightSheath_002_sheath_d_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_e_ci8[];
+extern u64 gExalinRightSheath_002_sheath_e_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_f_ci8[];
+extern u64 gExalinRightSheath_002_sheath_f_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_i_ci8[];
+extern u64 gExalinRightSheath_002_sheath_i_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_j_ci8[];
+extern u64 gExalinRightSheath_002_sheath_j_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_k_ci8[];
+extern u64 gExalinRightSheath_002_sheath_k_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_l_ci8[];
+extern u64 gExalinRightSheath_002_sheath_l_pal_rgba16[];
+extern u64 gExalinRightSheath_002_sheath_a_ci4[];
+extern u64 gExalinRightSheath_002_sheath_a_pal_rgba16[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_cull[8];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_0[5];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_0[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_1[6];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_1[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_2[18];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_2[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_3[17];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_3[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_4[10];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_4[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_5[12];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_5[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_6[21];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_6[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_7[15];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_7[];
+extern Vtx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_vtx_8[4];
+extern Gfx gExalinRightSheath_002_gExalinRightSheath_002_mesh_layer_Opaque_tri_8[];
+extern Gfx mat_gExalinRightSheath_002_sheath_c_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_c_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_d_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_d_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_e_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_e_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_f_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_f_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_i_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_i_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_j_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_j_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_k_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_k_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_l_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_l_f3d_layerOpaque[];
+extern Gfx mat_gExalinRightSheath_002_sheath_a_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheath_002_sheath_a_f3d_layerOpaque[];
+extern Gfx gExalinRightSheath_002[];
+
+#endif

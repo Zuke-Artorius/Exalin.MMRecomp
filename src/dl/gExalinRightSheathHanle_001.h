@@ -1,0 +1,16 @@
+#ifndef GEXALINRIGHTSHEATHHANLE_001_H
+#define GEXALINRIGHTSHEATHHANLE_001_H
+
+#include "ultra64.h"
+#include "global.h"
+
+extern u64 gExalinRightSheathHanle_001_grip_a_ci8[];
+extern u64 gExalinRightSheathHanle_001_grip_a_pal_rgba16[];
+extern Vtx gExalinRightSheathHanle_001_gExalinRightSheathHanle_001_mesh_layer_Opaque_vtx_cull[8];
+extern Vtx gExalinRightSheathHanle_001_gExalinRightSheathHanle_001_mesh_layer_Opaque_vtx_0[53];
+extern Gfx gExalinRightSheathHanle_001_gExalinRightSheathHanle_001_mesh_layer_Opaque_tri_0[];
+extern Gfx mat_gExalinRightSheathHanle_001_grip_a_f3d_layerOpaque[];
+extern Gfx mat_revert_gExalinRightSheathHanle_001_grip_a_f3d_layerOpaque[];
+extern Gfx gExalinRightSheathHanle_001[];
+
+#endif

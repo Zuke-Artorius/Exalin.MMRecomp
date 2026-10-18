@@ -19146,7 +19146,7 @@ Vtx gExalinAdultSkel_bone008_gLinkZoraLeftFootLimb_mesh_layer_Opaque_vtx_11[18] 
 	{{ {161, 262, 172}, 0, {104, 616}, {0, 210, 118, 255} }},
 	{{ {158, 368, 189}, 0, {8, 808}, {237, 236, 124, 255} }},
 	{{ {-28, 245, 142}, 0, {488, 760}, {237, 232, 123, 255} }},
-	{{ {-172, 322, 119}, 0, {680, 1000}, {181, 246, 102, 255} }},
+	{{ {-172, 323, 119}, 0, {680, 1000}, {181, 246, 102, 255} }},
 	{{ {-164, 237, 117}, 0, {680, 856}, {180, 238, 100, 255} }},
 	{{ {-225, 308, 3}, 0, {920, 1000}, {129, 249, 0, 255} }},
 	{{ {-225, 229, 9}, 0, {920, 904}, {131, 233, 3, 255} }},
@@ -21260,7 +21260,7 @@ Vtx gExalinAdultSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque_vtx_21[78] 
 	{{ {198, 553, -142}, 0, {328, 424}, {126, 242, 244, 255} }},
 	{{ {193, 596, -162}, 0, {232, 328}, {88, 85, 221, 255} }},
 	{{ {194, 525, -92}, 0, {328, 712}, {126, 244, 8, 255} }},
-	{{ {181, 549, -61}, 0, {232, 712}, {80, 65, 74, 255} }},
+	{{ {181, 549, -61}, 0, {232, 712}, {81, 65, 74, 255} }},
 	{{ {149, 578, -93}, 0, {88, 616}, {204, 107, 44, 255} }},
 	{{ {158, 607, -164}, 0, {88, 328}, {217, 114, 216, 255} }},
 	{{ {141, 567, -156}, 0, {-8, 376}, {136, 12, 217, 255} }},
@@ -21275,7 +21275,7 @@ Vtx gExalinAdultSkel_bone015_gLinkZoraLeftHandLimb_mesh_layer_Opaque_vtx_21[78] 
 	{{ {170, 487, -15}, 0, {232, 904}, {80, 47, 86, 255} }},
 	{{ {164, 457, 5}, 0, {232, 1000}, {76, 32, 97, 255} }},
 	{{ {194, 525, -92}, 0, {328, 712}, {126, 244, 8, 255} }},
-	{{ {181, 549, -61}, 0, {232, 712}, {80, 65, 74, 255} }},
+	{{ {181, 549, -61}, 0, {232, 712}, {81, 65, 74, 255} }},
 	{{ {144, 560, -62}, 0, {88, 712}, {203, 91, 71, 255} }},
 	{{ {149, 578, -93}, 0, {88, 616}, {204, 107, 44, 255} }},
 	{{ {133, 497, -15}, 0, {88, 904}, {198, 74, 85, 255} }},
@@ -22723,9 +22723,9 @@ Gfx gExalinAdultSkel_bone018_gLinkZoraRightHandLimb_mesh_layer_Opaque_tri_31[] =
 };
 
 Vtx gExalinAdultSkel_bone019_gLinkZoraSheathLimb_mesh_layer_Opaque_vtx_0[3] = {
-	{{ {310, -109, 663}, 0, {-16, 1008}, {147, 192, 11, 255} }},
-	{{ {238, -25, 446}, 0, {-16, 1008}, {147, 192, 11, 255} }},
-	{{ {348, -212, 446}, 0, {-16, 1008}, {147, 192, 11, 255} }},
+	{{ {138, 80, 65}, 0, {-16, 1008}, {147, 192, 11, 255} }},
+	{{ {67, 164, -151}, 0, {-16, 1008}, {147, 192, 11, 255} }},
+	{{ {177, -23, -151}, 0, {-16, 1008}, {147, 192, 11, 255} }},
 };
 
 Gfx gExalinAdultSkel_bone019_gLinkZoraSheathLimb_mesh_layer_Opaque_tri_0[] = {
@@ -24284,11 +24284,11 @@ Gfx gExalinAdultSkel_bone020_gLinkZoraTorsoLimb_mesh_layer_Opaque_tri_54[] = {
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_021_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture21_rgba32),
@@ -24301,16 +24301,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_021_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_021_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_022_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture22_rgba32),
@@ -24323,16 +24323,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_022_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_022_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_023_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture23_rgba32),
@@ -24345,16 +24345,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_023_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_023_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_020_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture20_rgba32),
@@ -24367,16 +24367,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_020_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_020_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_024_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture24_rgba32),
@@ -24389,16 +24389,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_024_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_024_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_025_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture25_rgba32),
@@ -24411,16 +24411,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_025_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_025_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_026_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture26_rgba32),
@@ -24433,16 +24433,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_026_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_026_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3d_buckle_base_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 71, 71, 71, 255),
 	gsSPEndDisplayList(),
@@ -24450,16 +24450,16 @@ Gfx mat_gExalinAdultSkel_f3d_buckle_base_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3d_buckle_base_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3d_buckle_reflect_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_TEXTURE_GEN | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, COMBINED, 0, PRIMITIVE, 0),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | CVG_DST_WRAP | AA_EN | FORCE_BL | ZMODE_DEC | IM_RD | Z_CMP | CLR_ON_CVG | G_AC_NONE | GBL_c1(G_BL_CLR_FOG, G_BL_A_SHADE, G_BL_CLR_IN, G_BL_1MA) | GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA)),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, FORCE_BL | AA_EN | CLR_ON_CVG | IM_RD | G_AC_NONE | CVG_DST_WRAP | G_ZS_PIXEL | ZMODE_DEC | GBL_c1(G_BL_CLR_FOG, G_BL_A_SHADE, G_BL_CLR_IN, G_BL_1MA) | GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) | Z_CMP),
 	gsSPTexture(448, 448, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 128),
 	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, gExalinAdultSkel_tex_01D300_i8_png_001_ia8),
@@ -24472,16 +24472,16 @@ Gfx mat_gExalinAdultSkel_f3d_buckle_reflect_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3d_buckle_reflect_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_003_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture3_rgba32),
@@ -24494,16 +24494,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_003_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_003_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_002_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture2_rgba32),
@@ -24516,16 +24516,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_002_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_002_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture0_rgba32),
@@ -24538,16 +24538,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_006_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture6_rgba32),
@@ -24560,16 +24560,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_006_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_006_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_031_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture31_rgba32),
@@ -24582,16 +24582,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_031_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_031_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_004_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture4_rgba32),
@@ -24604,16 +24604,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_004_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_004_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_008_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture8_rgba32),
@@ -24626,16 +24626,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_008_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_008_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_001_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture1_rgba32),
@@ -24648,16 +24648,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_001_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_001_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_007_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture7_rgba32),
@@ -24670,16 +24670,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_007_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_007_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_030_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture30_rgba32),
@@ -24692,16 +24692,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_030_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_030_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_029_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture29_rgba32),
@@ -24714,16 +24714,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_029_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_029_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_032_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture32_rgba32),
@@ -24736,16 +24736,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_032_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_032_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_009_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture9_rgba32),
@@ -24758,16 +24758,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_009_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_009_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_022_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture22_rgba32),
@@ -24780,16 +24780,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_022_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_022_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_005_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture5_rgba32),
@@ -24802,16 +24802,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_005_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_005_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_023_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture23_rgba32),
@@ -24824,16 +24824,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_023_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_023_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_014_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture14_rgba32),
@@ -24846,16 +24846,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_014_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_014_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_020_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture20_rgba32),
@@ -24868,16 +24868,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_020_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_020_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_015_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture15_rgba32),
@@ -24890,16 +24890,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_015_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_015_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_012_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture12_rgba32),
@@ -24912,16 +24912,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_012_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_012_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_025_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture25_rgba32),
@@ -24934,16 +24934,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_025_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_025_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_027_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture27_rgba32),
@@ -24956,16 +24956,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_027_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_027_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_017_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture17_rgba32),
@@ -24978,16 +24978,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_017_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_017_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_021_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture21_rgba32),
@@ -25000,16 +25000,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_021_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_021_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_016_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture16_rgba32),
@@ -25022,16 +25022,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_016_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_016_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_024_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture24_rgba32),
@@ -25044,16 +25044,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_024_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_024_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_010_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture10_rgba32),
@@ -25066,16 +25066,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_010_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_010_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_028_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture28_rgba32),
@@ -25088,16 +25088,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_028_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_028_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_011_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture11_rgba32),
@@ -25110,16 +25110,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_011_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_011_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_026_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture26_rgba32),
@@ -25132,16 +25132,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_026_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_026_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_013_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture13_rgba32),
@@ -25154,16 +25154,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_013_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_013_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_018_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture18_rgba32),
@@ -25176,16 +25176,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_018_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_018_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_019_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture19_rgba32),
@@ -25198,16 +25198,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_019_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_019_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_042_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture42_rgba32),
@@ -25220,16 +25220,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_042_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_042_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_040_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture40_rgba32),
@@ -25242,16 +25242,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_040_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_040_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_043_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture43_rgba32),
@@ -25264,16 +25264,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_043_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_043_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_041_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture41_rgba32),
@@ -25286,16 +25286,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_041_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_041_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_045_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture45_rgba32),
@@ -25308,16 +25308,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_045_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_045_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_044_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture44_rgba32),
@@ -25330,16 +25330,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_044_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_044_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_047_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture47_rgba32),
@@ -25352,16 +25352,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_047_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_047_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_046_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture46_rgba32),
@@ -25374,16 +25374,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_046_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_046_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_048_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture48_rgba32),
@@ -25396,16 +25396,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_048_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_048_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_055_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture55_rgba32),
@@ -25418,16 +25418,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_055_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_055_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_056_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture56_rgba32),
@@ -25440,16 +25440,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_056_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_056_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_057_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture57_rgba32),
@@ -25462,16 +25462,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_057_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_057_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_058_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture58_rgba32),
@@ -25484,16 +25484,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_058_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_058_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_034_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture34_rgba32),
@@ -25506,16 +25506,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_034_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_034_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_033_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture33_rgba32),
@@ -25528,16 +25528,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_033_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_033_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_036_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture36_rgba32),
@@ -25550,16 +25550,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_036_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_036_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_035_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture35_rgba32),
@@ -25572,16 +25572,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_035_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_035_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_038_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture38_rgba32),
@@ -25594,16 +25594,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_038_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_038_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_037_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture37_rgba32),
@@ -25616,16 +25616,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_037_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_037_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_039_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture39_rgba32),
@@ -25638,16 +25638,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_039_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_039_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_052_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture52_rgba32),
@@ -25660,16 +25660,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_052_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_052_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_051_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture51_rgba32),
@@ -25682,16 +25682,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_051_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_051_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_053_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture53_rgba32),
@@ -25704,16 +25704,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_053_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_053_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_050_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture50_rgba32),
@@ -25726,16 +25726,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_050_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_050_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_049_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture49_rgba32),
@@ -25748,16 +25748,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_049_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_049_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_pants_mat_054_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_pants_texture54_rgba32),
@@ -25770,16 +25770,16 @@ Gfx mat_gExalinAdultSkel_exalin_pants_mat_054_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_pants_mat_054_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_018_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture18_rgba32),
@@ -25792,16 +25792,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_018_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_018_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_009_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture9_rgba32),
@@ -25814,16 +25814,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_009_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_009_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_017_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture17_rgba32),
@@ -25836,16 +25836,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_017_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_017_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_008_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture8_rgba32),
@@ -25858,16 +25858,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_008_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_008_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_012_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture12_rgba32),
@@ -25880,16 +25880,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_012_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_012_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_021_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture21_rgba32),
@@ -25902,16 +25902,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_021_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_021_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_022_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture22_rgba32),
@@ -25924,16 +25924,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_022_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_022_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_019_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture19_rgba32),
@@ -25946,16 +25946,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_019_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_019_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_016_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture16_rgba32),
@@ -25968,16 +25968,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_016_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_016_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_029_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture29_rgba32),
@@ -25990,16 +25990,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_029_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_029_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_028_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture28_rgba32),
@@ -26012,16 +26012,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_028_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_028_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_010_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture10_rgba32),
@@ -26034,16 +26034,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_010_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_010_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_027_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture27_rgba32),
@@ -26056,16 +26056,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_027_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_027_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_047_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture47_rgba32),
@@ -26078,16 +26078,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_047_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_047_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_013_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture13_rgba32),
@@ -26100,16 +26100,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_013_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_013_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_030_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture30_rgba32),
@@ -26122,16 +26122,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_030_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_030_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_011_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture11_rgba32),
@@ -26144,16 +26144,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_011_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_011_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_032_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture32_rgba32),
@@ -26166,16 +26166,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_032_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_032_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_020_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture20_rgba32),
@@ -26188,16 +26188,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_020_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_020_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_025_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture25_rgba32),
@@ -26210,16 +26210,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_025_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_025_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_024_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture24_rgba32),
@@ -26232,16 +26232,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_024_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_024_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_014_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture14_rgba32),
@@ -26254,16 +26254,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_014_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_014_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_023_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture23_rgba32),
@@ -26276,16 +26276,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_023_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_023_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_015_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture15_rgba32),
@@ -26298,16 +26298,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_015_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_015_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_034_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture34_rgba32),
@@ -26320,16 +26320,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_034_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_034_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_037_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture37_rgba32),
@@ -26342,16 +26342,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_037_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_037_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_045_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture45_rgba32),
@@ -26364,16 +26364,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_045_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_045_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_031_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture31_rgba32),
@@ -26386,16 +26386,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_031_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_031_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_026_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture26_rgba32),
@@ -26408,16 +26408,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_026_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_026_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_041_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture41_rgba32),
@@ -26430,16 +26430,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_041_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_041_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_046_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture46_rgba32),
@@ -26452,16 +26452,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_046_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_046_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_035_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture35_rgba32),
@@ -26474,16 +26474,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_035_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_035_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_044_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture44_rgba32),
@@ -26496,16 +26496,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_044_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_044_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_033_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture33_rgba32),
@@ -26518,16 +26518,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_033_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_033_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_038_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture38_rgba32),
@@ -26540,16 +26540,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_038_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_038_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_040_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture40_rgba32),
@@ -26562,16 +26562,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_040_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_040_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_036_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture36_rgba32),
@@ -26584,16 +26584,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_036_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_036_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_039_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture39_rgba32),
@@ -26606,16 +26606,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_039_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_039_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_042_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture42_rgba32),
@@ -26628,16 +26628,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_042_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_042_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_043_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture43_rgba32),
@@ -26650,16 +26650,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_043_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_043_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture0_rgba32),
@@ -26672,16 +26672,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_002_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture2_rgba32),
@@ -26694,16 +26694,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_002_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_002_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_003_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture3_rgba32),
@@ -26716,16 +26716,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_003_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_003_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3dlite_material_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_RGBA16 | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinAdultSkel_sExalinEyeL_pal_rgba16),
@@ -26741,16 +26741,16 @@ Gfx mat_gExalinAdultSkel_f3dlite_material_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3dlite_material_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3dlite_material_003_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_RGBA16 | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinAdultSkel_sExalinMouth_pal_rgba16),
@@ -26766,16 +26766,16 @@ Gfx mat_gExalinAdultSkel_f3dlite_material_003_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3dlite_material_003_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_001_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture1_rgba32),
@@ -26788,16 +26788,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_001_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_001_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3dlite_material_002_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_RGBA16 | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinAdultSkel_sExalinEyeR_pal_rgba16),
@@ -26813,16 +26813,16 @@ Gfx mat_gExalinAdultSkel_f3dlite_material_002_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3dlite_material_002_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_006_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture6_rgba32),
@@ -26835,16 +26835,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_006_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_006_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_007_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture7_rgba32),
@@ -26857,16 +26857,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_007_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_007_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3d_cull_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_CULL_FRONT | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_CULL_FRONT | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, 0, COMBINED, 0, PRIMITIVE, 0, COMBINED, 0, PRIMITIVE, 0),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_XLU_SURF2 | G_AC_NONE),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_XLU_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 128),
 	gsSPEndDisplayList(),
@@ -26874,16 +26874,16 @@ Gfx mat_gExalinAdultSkel_f3d_cull_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3d_cull_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_019_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture19_rgba32),
@@ -26896,16 +26896,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_019_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_019_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_018_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture18_rgba32),
@@ -26918,16 +26918,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_018_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_018_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_037_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture37_rgba32),
@@ -26940,16 +26940,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_037_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_037_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_038_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture38_rgba32),
@@ -26962,16 +26962,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_038_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_038_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_028_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture28_rgba32),
@@ -26984,16 +26984,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_028_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_028_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_035_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture35_rgba32),
@@ -27006,16 +27006,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_035_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_035_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_036_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture36_rgba32),
@@ -27028,16 +27028,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_036_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_036_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_027_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture27_rgba32),
@@ -27050,16 +27050,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_027_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_027_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_029_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture29_rgba32),
@@ -27072,16 +27072,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_029_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_029_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_033_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture33_rgba32),
@@ -27094,16 +27094,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_033_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_033_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_034_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture34_rgba32),
@@ -27116,16 +27116,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_034_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_034_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_032_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture32_rgba32),
@@ -27138,16 +27138,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_032_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_032_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_030_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture30_rgba32),
@@ -27160,16 +27160,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_030_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_030_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_031_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture31_rgba32),
@@ -27182,16 +27182,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_031_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_031_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_055_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture55_rgba32),
@@ -27204,16 +27204,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_055_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_055_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_069_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture69_rgba32),
@@ -27226,16 +27226,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_069_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_069_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_053_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture53_rgba32),
@@ -27248,16 +27248,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_053_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_053_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_058_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture58_rgba32),
@@ -27270,16 +27270,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_058_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_058_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_054_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture54_rgba32),
@@ -27292,16 +27292,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_054_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_054_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_052_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture52_rgba32),
@@ -27314,16 +27314,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_052_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_052_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_057_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture57_rgba32),
@@ -27336,16 +27336,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_057_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_057_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_056_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture56_rgba32),
@@ -27358,16 +27358,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_056_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_056_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_050_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture50_rgba32),
@@ -27380,16 +27380,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_050_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_050_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_066_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture66_rgba32),
@@ -27402,16 +27402,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_066_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_066_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_051_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture51_rgba32),
@@ -27424,16 +27424,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_051_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_051_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_068_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture68_rgba32),
@@ -27446,16 +27446,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_068_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_068_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_048_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture48_rgba32),
@@ -27468,16 +27468,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_048_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_048_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_049_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture49_rgba32),
@@ -27490,16 +27490,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_049_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_049_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_065_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture65_rgba32),
@@ -27512,16 +27512,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_065_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_065_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_061_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture61_rgba32),
@@ -27534,16 +27534,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_061_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_061_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_060_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture60_rgba32),
@@ -27556,16 +27556,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_060_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_060_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_059_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture59_rgba32),
@@ -27578,16 +27578,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_059_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_059_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_064_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture64_rgba32),
@@ -27600,16 +27600,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_064_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_064_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_063_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture63_rgba32),
@@ -27622,16 +27622,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_063_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_063_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_062_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture62_rgba32),
@@ -27644,16 +27644,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_062_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_062_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_067_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture67_rgba32),
@@ -27666,16 +27666,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_067_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_067_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_handplate_base_i8),
@@ -27688,16 +27688,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_001_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture1_rgba32),
@@ -27710,16 +27710,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_001_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_001_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_002_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_RGBA16 | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinAdultSkel_exalin_torso_texture2_pal_rgba16),
@@ -27735,16 +27735,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_002_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_002_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3d_mask_reflect_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_TEXTURE_GEN | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, COMBINED, 0, TEXEL1, 0),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_XLU_SURF2 | G_AC_NONE),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_XLU_SURF2),
 	gsSPTexture(1984, 1984, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b_LOAD_BLOCK, 1, gExalinAdultSkel_handplate_decal_ia16),
@@ -27757,16 +27757,16 @@ Gfx mat_gExalinAdultSkel_f3d_mask_reflect_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3d_mask_reflect_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_002_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_mesh_sleeve_fur_texture2_rgba32),
@@ -27779,16 +27779,16 @@ Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_002_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_002_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_003_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_mesh_sleeve_fur_texture3_rgba32),
@@ -27801,16 +27801,16 @@ Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_003_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_003_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_001_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_mesh_sleeve_fur_texture1_rgba32),
@@ -27823,16 +27823,16 @@ Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_001_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_001_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_004_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_mesh_sleeve_fur_texture4_rgba32),
@@ -27845,16 +27845,16 @@ Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_004_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_004_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_TEX_EDGE2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_RM_AA_ZB_TEX_EDGE2 | G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_mesh_sleeve_fur_texture0_rgba32),
@@ -27867,16 +27867,16 @@ Gfx mat_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_mesh_sleeve_fur_mat_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_003_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture3_rgba32),
@@ -27889,16 +27889,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_003_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_003_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_004_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture4_rgba32),
@@ -27911,16 +27911,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_004_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_004_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_009_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture9_rgba32),
@@ -27933,16 +27933,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_009_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_009_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_005_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture5_rgba32),
@@ -27955,16 +27955,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_005_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_005_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_006_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture6_rgba32),
@@ -27977,16 +27977,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_006_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_006_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_007_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture7_rgba32),
@@ -27999,16 +27999,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_007_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_007_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_011_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture11_rgba32),
@@ -28021,16 +28021,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_011_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_011_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_010_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture10_rgba32),
@@ -28043,16 +28043,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_010_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_010_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_008_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture8_rgba32),
@@ -28065,16 +28065,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_008_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_008_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_012_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture12_rgba32),
@@ -28087,16 +28087,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_012_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_012_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_013_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture13_rgba32),
@@ -28109,16 +28109,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_013_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_013_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_015_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture15_rgba32),
@@ -28131,16 +28131,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_015_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_015_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_017_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture17_rgba32),
@@ -28153,16 +28153,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_017_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_017_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_014_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture14_rgba32),
@@ -28175,16 +28175,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_014_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_014_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_torso_mat_016_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_torso_texture16_rgba32),
@@ -28197,16 +28197,16 @@ Gfx mat_gExalinAdultSkel_exalin_torso_mat_016_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_torso_mat_016_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3d_button_base_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 104, 75, 0, 255),
 	gsSPEndDisplayList(),
@@ -28214,16 +28214,16 @@ Gfx mat_gExalinAdultSkel_f3d_button_base_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3d_button_base_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_f3d_button_reflect_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_SHADE | G_TEXTURE_GEN | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, COMBINED, 0, PRIMITIVE, 0),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_XLU_SURF2 | G_AC_NONE),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_XLU_SURF2),
 	gsSPTexture(448, 448, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 208, 161, 65, 128),
 	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, gExalinAdultSkel_tex_01D300_i8_png_001_i8),
@@ -28236,16 +28236,16 @@ Gfx mat_gExalinAdultSkel_f3d_button_reflect_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_f3d_button_reflect_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture0_rgba32),
@@ -28258,16 +28258,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_002_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture2_rgba32),
@@ -28280,16 +28280,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_002_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_002_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_024_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture24_rgba32),
@@ -28302,16 +28302,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_024_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_024_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_001_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture1_rgba32),
@@ -28324,16 +28324,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_001_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_001_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_005_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture5_rgba32),
@@ -28346,16 +28346,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_005_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_005_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_023_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture23_rgba32),
@@ -28368,16 +28368,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_023_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_023_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_003_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture3_rgba32),
@@ -28390,16 +28390,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_003_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_003_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_004_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture4_rgba32),
@@ -28412,16 +28412,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_004_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_004_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_009_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture9_rgba32),
@@ -28434,16 +28434,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_009_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_009_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_011_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture11_rgba32),
@@ -28456,16 +28456,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_011_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_011_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_006_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture6_rgba32),
@@ -28478,16 +28478,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_006_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_006_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_008_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture8_rgba32),
@@ -28500,16 +28500,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_008_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_008_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_007_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture7_rgba32),
@@ -28522,16 +28522,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_007_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_007_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_010_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture10_rgba32),
@@ -28544,16 +28544,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_010_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_010_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_012_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture12_rgba32),
@@ -28566,16 +28566,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_012_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_012_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_013_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture13_rgba32),
@@ -28588,16 +28588,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_013_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_013_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_014_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture14_rgba32),
@@ -28610,16 +28610,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_014_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_014_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_028_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture28_rgba32),
@@ -28632,16 +28632,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_028_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_028_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_019_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture19_rgba32),
@@ -28654,16 +28654,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_019_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_019_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_020_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture20_rgba32),
@@ -28676,16 +28676,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_020_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_020_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_032_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture32_rgba32),
@@ -28698,16 +28698,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_032_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_032_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_015_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture15_rgba32),
@@ -28720,16 +28720,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_015_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_015_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_016_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture16_rgba32),
@@ -28742,16 +28742,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_016_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_016_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_017_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture17_rgba32),
@@ -28764,16 +28764,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_017_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_017_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_021_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture21_rgba32),
@@ -28786,16 +28786,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_021_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_021_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_018_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture18_rgba32),
@@ -28808,16 +28808,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_018_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_018_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_022_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture22_rgba32),
@@ -28830,16 +28830,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_022_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_022_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_027_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture27_rgba32),
@@ -28852,16 +28852,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_027_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_027_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_025_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture25_rgba32),
@@ -28874,16 +28874,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_025_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_025_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_026_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture26_rgba32),
@@ -28896,16 +28896,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_026_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_026_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_031_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture31_rgba32),
@@ -28918,16 +28918,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_031_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_031_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_029_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture29_rgba32),
@@ -28940,16 +28940,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_029_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_029_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_033_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture33_rgba32),
@@ -28962,16 +28962,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_033_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_033_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_scarf_mat_030_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_scarf_texture30_rgba32),
@@ -28984,16 +28984,16 @@ Gfx mat_gExalinAdultSkel_exalin_scarf_mat_030_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_scarf_mat_030_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_004_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture4_rgba32),
@@ -29006,16 +29006,16 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_004_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_004_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_gExalinAdultSkel_exalin_skins_mat_005_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH | G_LIGHTING | G_FOG | G_CULL_BACK),
+	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_CK_NONE | G_TD_CLAMP | G_TT_NONE | G_TP_PERSP | G_TF_BILERP | G_CD_MAGICSQ | G_TL_TILE | G_CYC_2CYCLE | G_TC_FILT | G_AD_NOISE | G_PM_NPRIMITIVE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_AC_NONE | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_TT_NONE | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_32b_LOAD_BLOCK, 1, gExalinAdultSkel_exalin_skins_texture5_rgba32),
@@ -29028,7 +29028,7 @@ Gfx mat_gExalinAdultSkel_exalin_skins_mat_005_f3d_layerOpaque[] = {
 
 Gfx mat_revert_gExalinAdultSkel_exalin_skins_mat_005_f3d_layerOpaque[] = {
 	gsDPPipeSync(),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2),
 	gsSPEndDisplayList(),
 };
 
@@ -30119,7 +30119,7 @@ StandardLimb gExalinAdultSkelLimb_015 = { { 710, 0, 0 }, 255, 255, gExalinAdultS
 StandardLimb gExalinAdultSkelLimb_016 = { { 902, -38, -599 }, 17, 19, gExalinAdultSkel_bone016_gLinkZoraRightShoulderLimb_mesh_layer_Opaque };
 StandardLimb gExalinAdultSkelLimb_017 = { { 819, 0, 0 }, 18, 255, gExalinAdultSkel_bone017_gLinkZoraRightForearmLimb_mesh_layer_Opaque };
 StandardLimb gExalinAdultSkelLimb_018 = { { 710, 0, 0 }, 255, 255, gExalinAdultSkel_bone018_gLinkZoraRightHandLimb_mesh_layer_Opaque };
-StandardLimb gExalinAdultSkelLimb_019 = { { -80, -565, 251 }, 255, 20, gExalinAdultSkel_bone019_gLinkZoraSheathLimb_mesh_layer_Opaque };
+StandardLimb gExalinAdultSkelLimb_019 = { { -80, 35, 1 }, 255, 20, gExalinAdultSkel_bone019_gLinkZoraSheathLimb_mesh_layer_Opaque };
 StandardLimb gExalinAdultSkelLimb_020 = { { 0, 0, 0 }, 255, 255, gExalinAdultSkel_bone020_gLinkZoraTorsoLimb_mesh_layer_Opaque };
 
 void* gExalinAdultSkelLimbs[21] = {
