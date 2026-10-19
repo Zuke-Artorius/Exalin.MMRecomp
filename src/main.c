@@ -941,7 +941,7 @@ RECOMP_HOOK("KaleidoScope_DrawQuestStatus") void on_KaleidoScope_DrawQuestStatus
     GraphicsContext* gfxCtx = play->state.gfxCtx;
     PauseContext* pauseCtx = &play->pauseCtx;
     
-    if ((GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SHIELD) != EQUIP_VALUE_SHIELD_NONE) && (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD) != EQUIP_VALUE_SWORD_NONE)) {
+    if ((isExalin) && (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SHIELD) != EQUIP_VALUE_SHIELD_NONE) && (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD) != EQUIP_VALUE_SWORD_NONE)) {
         OPEN_DISPS(play->state.gfxCtx);
 
         KaleidoScope_SetCursorVtxPos(pauseCtx, pauseCtx->cursorSlot[PAUSE_QUEST] * 4, pauseCtx->questVtx);
