@@ -398,27 +398,27 @@ u64 gExalinLeftSheath_003_sheath_a_pal_rgba16[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_cull[8] = {
-	{{ {-659, 261, -2206}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-659, 261, 446}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-659, 1290, 446}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {-659, 1290, -2206}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {592, 261, -2206}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {592, 261, 446}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {592, 1290, 446}, 0, {0, 0}, {0, 0, 0, 0} }},
-	{{ {592, 1290, -2206}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {-433, 452, -1950}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {-433, 452, 504}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {-433, 1603, 504}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {-433, 1603, -1950}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {1031, 452, -1950}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {1031, 452, 504}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {1031, 1603, 504}, 0, {0, 0}, {0, 0, 0, 0} }},
+	{{ {1031, 1603, -1950}, 0, {0, 0}, {0, 0, 0, 0} }},
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_0[10] = {
-	{{ {-73, 708, -990}, 0, {404, 1653}, {162, 199, 193, 255} }},
-	{{ {-298, 509, -473}, 0, {403, 350}, {162, 199, 193, 255} }},
-	{{ {-113, 769, -985}, 0, {563, 1653}, {162, 199, 193, 255} }},
-	{{ {-154, 829, -979}, 0, {721, 1653}, {162, 199, 193, 255} }},
-	{{ {-378, 630, -462}, 0, {720, 350}, {162, 199, 193, 255} }},
-	{{ {-113, 769, -985}, 0, {562, 432}, {162, 199, 193, 255} }},
-	{{ {-154, 829, -979}, 0, {721, 432}, {162, 199, 193, 255} }},
-	{{ {71, 1028, -1496}, 0, {723, 1735}, {162, 199, 193, 255} }},
-	{{ {151, 907, -1507}, 0, {406, 1735}, {162, 199, 193, 255} }},
-	{{ {-73, 708, -990}, 0, {404, 432}, {162, 199, 193, 255} }},
+	{{ {335, 957, -848}, 0, {404, 1653}, {181, 191, 176, 255} }},
+	{{ {34, 732, -383}, 0, {403, 350}, {181, 191, 176, 255} }},
+	{{ {289, 1013, -851}, 0, {563, 1653}, {181, 191, 176, 255} }},
+	{{ {243, 1070, -853}, 0, {721, 1653}, {181, 191, 176, 255} }},
+	{{ {-58, 845, -389}, 0, {720, 350}, {181, 191, 176, 255} }},
+	{{ {289, 1013, -851}, 0, {562, 432}, {181, 191, 176, 255} }},
+	{{ {243, 1070, -853}, 0, {721, 432}, {181, 191, 176, 255} }},
+	{{ {544, 1295, -1318}, 0, {723, 1735}, {181, 191, 177, 255} }},
+	{{ {636, 1182, -1313}, 0, {406, 1735}, {181, 191, 177, 255} }},
+	{{ {335, 957, -848}, 0, {404, 432}, {181, 191, 176, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_0[] = {
@@ -430,11 +430,11 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_0[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_1[5] = {
-	{{ {409, 1233, -2206}, 0, {581, 1793}, {161, 198, 195, 255} }},
-	{{ {371, 1103, -2022}, 0, {422, 1312}, {161, 198, 194, 255} }},
-	{{ {290, 1223, -2011}, 0, {739, 1312}, {161, 198, 194, 255} }},
-	{{ {151, 907, -1507}, 0, {439, 169}, {162, 199, 193, 255} }},
-	{{ {71, 1028, -1496}, 0, {756, 169}, {162, 199, 193, 255} }},
+	{{ {993, 1539, -1950}, 0, {581, 1793}, {180, 190, 178, 255} }},
+	{{ {932, 1403, -1777}, 0, {422, 1312}, {180, 191, 178, 255} }},
+	{{ {840, 1516, -1782}, 0, {739, 1312}, {180, 191, 178, 255} }},
+	{{ {636, 1182, -1313}, 0, {439, 169}, {181, 191, 177, 255} }},
+	{{ {544, 1295, -1318}, 0, {756, 169}, {181, 191, 177, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_1[] = {
@@ -445,20 +445,20 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_1[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_2[14] = {
-	{{ {409, 1233, -2206}, 0, {113, 1933}, {107, 193, 231, 255} }},
-	{{ {500, 1262, -1856}, 0, {679, 1381}, {111, 200, 231, 255} }},
-	{{ {456, 1198, -1912}, 0, {485, 1399}, {109, 195, 231, 255} }},
-	{{ {371, 1103, -2022}, 0, {133, 1462}, {98, 178, 235, 255} }},
-	{{ {515, 1155, -1547}, 0, {947, 738}, {96, 174, 244, 255} }},
-	{{ {151, 907, -1507}, 0, {169, 169}, {70, 151, 246, 255} }},
-	{{ {388, 1051, -1345}, 0, {869, 175}, {70, 151, 246, 255} }},
-	{{ {71, 1028, -1496}, 0, {170, 168}, {186, 105, 10, 255} }},
-	{{ {307, 1171, -1333}, 0, {870, 174}, {186, 105, 10, 255} }},
-	{{ {434, 1275, -1536}, 0, {947, 738}, {217, 121, 7, 255} }},
-	{{ {290, 1223, -2011}, 0, {133, 1461}, {221, 122, 253, 255} }},
-	{{ {420, 1251, -1914}, 0, {476, 1413}, {240, 126, 249, 255} }},
-	{{ {409, 1233, -2206}, 0, {113, 1933}, {237, 125, 249, 255} }},
-	{{ {500, 1262, -1856}, 0, {679, 1381}, {246, 126, 248, 255} }},
+	{{ {993, 1539, -1950}, 0, {113, 1933}, {115, 203, 253, 255} }},
+	{{ {1012, 1571, -1590}, 0, {679, 1381}, {119, 211, 254, 255} }},
+	{{ {985, 1504, -1652}, 0, {485, 1399}, {116, 205, 253, 255} }},
+	{{ {932, 1403, -1777}, 0, {133, 1462}, {107, 188, 254, 255} }},
+	{{ {977, 1462, -1283}, 0, {947, 738}, {104, 183, 7, 255} }},
+	{{ {636, 1182, -1313}, 0, {169, 169}, {80, 158, 4, 255} }},
+	{{ {823, 1344, -1108}, 0, {869, 175}, {80, 158, 4, 255} }},
+	{{ {544, 1295, -1318}, 0, {170, 168}, {176, 98, 252, 255} }},
+	{{ {731, 1456, -1114}, 0, {870, 174}, {176, 98, 252, 255} }},
+	{{ {885, 1574, -1288}, 0, {947, 738}, {206, 117, 254, 255} }},
+	{{ {840, 1516, -1782}, 0, {133, 1461}, {211, 118, 246, 255} }},
+	{{ {946, 1554, -1662}, 0, {476, 1413}, {230, 124, 245, 255} }},
+	{{ {993, 1539, -1950}, 0, {113, 1933}, {228, 123, 245, 255} }},
+	{{ {1012, 1571, -1590}, 0, {679, 1381}, {236, 125, 246, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_2[] = {
@@ -472,20 +472,20 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_2[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_3[14] = {
-	{{ {592, 1290, -1507}, 0, {772, 767}, {243, 126, 8, 255} }},
-	{{ {500, 1262, -1856}, 0, {206, 1318}, {246, 126, 248, 255} }},
-	{{ {420, 1251, -1914}, 0, {2, 1350}, {240, 126, 249, 255} }},
-	{{ {434, 1275, -1536}, 0, {474, 675}, {217, 121, 7, 255} }},
-	{{ {407, 1231, -1265}, 0, {690, 114}, {215, 118, 23, 255} }},
-	{{ {307, 1171, -1333}, 0, {396, 111}, {186, 105, 10, 255} }},
-	{{ {552, 1234, -1199}, 0, {1000, 116}, {238, 121, 33, 255} }},
-	{{ {592, 1290, -1507}, 0, {772, 767}, {112, 196, 247, 255} }},
-	{{ {552, 1234, -1199}, 0, {1000, 116}, {108, 190, 15, 255} }},
-	{{ {487, 1111, -1276}, 0, {690, 114}, {94, 171, 4, 255} }},
-	{{ {515, 1155, -1547}, 0, {473, 675}, {96, 174, 244, 255} }},
-	{{ {388, 1051, -1345}, 0, {396, 111}, {70, 151, 246, 255} }},
-	{{ {500, 1262, -1856}, 0, {206, 1318}, {111, 200, 231, 255} }},
-	{{ {456, 1198, -1912}, 0, {12, 1336}, {109, 195, 231, 255} }},
+	{{ {1031, 1603, -1229}, 0, {772, 767}, {231, 124, 5, 255} }},
+	{{ {1012, 1571, -1590}, 0, {206, 1318}, {236, 125, 246, 255} }},
+	{{ {946, 1554, -1662}, 0, {2, 1350}, {230, 124, 245, 255} }},
+	{{ {885, 1574, -1288}, 0, {474, 675}, {206, 117, 254, 255} }},
+	{{ {809, 1524, -1027}, 0, {690, 114}, {200, 113, 14, 255} }},
+	{{ {731, 1456, -1114}, 0, {396, 111}, {176, 98, 252, 255} }},
+	{{ {938, 1540, -934}, 0, {1000, 116}, {221, 119, 29, 255} }},
+	{{ {1031, 1603, -1229}, 0, {772, 767}, {116, 207, 13, 255} }},
+	{{ {938, 1540, -934}, 0, {1000, 116}, {108, 200, 36, 255} }},
+	{{ {901, 1412, -1022}, 0, {690, 114}, {99, 180, 22, 255} }},
+	{{ {977, 1462, -1283}, 0, {473, 675}, {104, 183, 7, 255} }},
+	{{ {823, 1344, -1108}, 0, {396, 111}, {80, 158, 4, 255} }},
+	{{ {1012, 1571, -1590}, 0, {206, 1318}, {119, 211, 254, 255} }},
+	{{ {985, 1504, -1652}, 0, {12, 1336}, {116, 205, 253, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_3[] = {
@@ -499,20 +499,20 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_3[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_4[14] = {
-	{{ {204, 1003, -750}, 0, {557, 27}, {235, 117, 44, 255} }},
-	{{ {274, 1003, -718}, 0, {704, 28}, {236, 117, 45, 255} }},
-	{{ {552, 1234, -1199}, 0, {835, 1333}, {238, 121, 33, 255} }},
-	{{ {131, 1001, -783}, 0, {403, 25}, {208, 114, 27, 255} }},
-	{{ {407, 1231, -1265}, 0, {525, 1330}, {215, 118, 23, 255} }},
-	{{ {81, 971, -817}, 0, {255, 24}, {186, 105, 10, 255} }},
-	{{ {307, 1171, -1333}, 0, {231, 1327}, {186, 105, 10, 255} }},
-	{{ {274, 1003, -718}, 0, {704, 28}, {104, 188, 27, 255} }},
-	{{ {243, 942, -756}, 0, {556, 27}, {103, 187, 26, 255} }},
-	{{ {552, 1234, -1199}, 0, {835, 1333}, {108, 190, 15, 255} }},
-	{{ {487, 1111, -1276}, 0, {525, 1330}, {94, 171, 4, 255} }},
-	{{ {211, 881, -795}, 0, {401, 25}, {89, 166, 8, 255} }},
-	{{ {388, 1051, -1345}, 0, {231, 1328}, {70, 151, 246, 255} }},
-	{{ {162, 850, -829}, 0, {254, 24}, {70, 151, 246, 255} }},
+	{{ {532, 1272, -560}, 0, {557, 27}, {216, 114, 39, 255} }},
+	{{ {595, 1278, -516}, 0, {704, 28}, {217, 114, 40, 255} }},
+	{{ {938, 1540, -934}, 0, {835, 1333}, {221, 119, 29, 255} }},
+	{{ {468, 1264, -607}, 0, {403, 25}, {194, 109, 17, 255} }},
+	{{ {809, 1524, -1027}, 0, {525, 1330}, {200, 113, 14, 255} }},
+	{{ {429, 1230, -650}, 0, {255, 24}, {176, 98, 252, 255} }},
+	{{ {731, 1456, -1114}, 0, {231, 1327}, {176, 98, 252, 255} }},
+	{{ {595, 1278, -516}, 0, {704, 28}, {102, 197, 47, 255} }},
+	{{ {578, 1215, -558}, 0, {556, 27}, {102, 196, 46, 255} }},
+	{{ {938, 1540, -934}, 0, {835, 1333}, {108, 200, 36, 255} }},
+	{{ {901, 1412, -1022}, 0, {525, 1330}, {99, 180, 22, 255} }},
+	{{ {559, 1152, -602}, 0, {401, 25}, {94, 174, 26, 255} }},
+	{{ {823, 1344, -1108}, 0, {231, 1328}, {80, 158, 4, 255} }},
+	{{ {520, 1118, -645}, 0, {254, 24}, {80, 158, 4, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_4[] = {
@@ -526,16 +526,16 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_4[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_5[10] = {
-	{{ {151, 907, -1507}, 0, {105, 1866}, {70, 151, 246, 255} }},
-	{{ {45, 780, -909}, 0, {483, 565}, {70, 151, 246, 255} }},
-	{{ {-73, 708, -990}, 0, {134, 562}, {70, 151, 246, 255} }},
-	{{ {388, 1051, -1345}, 0, {805, 1872}, {70, 151, 246, 255} }},
-	{{ {162, 850, -829}, 0, {828, 568}, {70, 151, 246, 255} }},
-	{{ {307, 1171, -1333}, 0, {802, 1871}, {186, 105, 10, 255} }},
-	{{ {-36, 900, -898}, 0, {481, 565}, {186, 105, 10, 255} }},
-	{{ {81, 971, -817}, 0, {827, 568}, {186, 105, 10, 255} }},
-	{{ {71, 1028, -1496}, 0, {102, 1865}, {186, 105, 10, 255} }},
-	{{ {-154, 829, -979}, 0, {131, 562}, {186, 105, 10, 255} }},
+	{{ {636, 1182, -1313}, 0, {105, 1866}, {80, 158, 4, 255} }},
+	{{ {428, 1038, -746}, 0, {483, 565}, {80, 158, 4, 255} }},
+	{{ {335, 957, -848}, 0, {134, 562}, {80, 158, 4, 255} }},
+	{{ {823, 1344, -1108}, 0, {805, 1872}, {80, 158, 4, 255} }},
+	{{ {520, 1118, -645}, 0, {828, 568}, {80, 158, 4, 255} }},
+	{{ {731, 1456, -1114}, 0, {802, 1871}, {176, 98, 252, 255} }},
+	{{ {336, 1150, -751}, 0, {481, 565}, {176, 98, 252, 255} }},
+	{{ {429, 1230, -650}, 0, {827, 568}, {176, 98, 252, 255} }},
+	{{ {544, 1295, -1318}, 0, {102, 1865}, {176, 98, 252, 255} }},
+	{{ {243, 1070, -853}, 0, {131, 562}, {176, 98, 252, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_5[] = {
@@ -547,16 +547,16 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_5[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_6[10] = {
-	{{ {-154, 829, -979}, 0, {132, 1808}, {186, 105, 10, 255} }},
-	{{ {-378, 630, -462}, 0, {161, 504}, {185, 105, 9, 255} }},
-	{{ {-36, 900, -898}, 0, {481, 1811}, {186, 105, 10, 255} }},
-	{{ {81, 971, -817}, 0, {827, 1814}, {186, 105, 10, 255} }},
-	{{ {-144, 771, -301}, 0, {851, 510}, {210, 115, 26, 255} }},
-	{{ {45, 780, -909}, 0, {483, 1811}, {70, 151, 246, 255} }},
-	{{ {162, 850, -829}, 0, {827, 1814}, {70, 151, 246, 255} }},
-	{{ {-65, 650, -313}, 0, {850, 510}, {90, 167, 6, 255} }},
-	{{ {-298, 509, -473}, 0, {161, 504}, {70, 151, 245, 255} }},
-	{{ {-73, 708, -990}, 0, {133, 1808}, {70, 151, 246, 255} }},
+	{{ {243, 1070, -853}, 0, {132, 1808}, {176, 98, 252, 255} }},
+	{{ {-58, 845, -389}, 0, {161, 504}, {176, 98, 251, 255} }},
+	{{ {336, 1150, -751}, 0, {481, 1811}, {176, 98, 252, 255} }},
+	{{ {429, 1230, -650}, 0, {827, 1814}, {176, 98, 252, 255} }},
+	{{ {127, 1004, -186}, 0, {851, 510}, {195, 110, 16, 255} }},
+	{{ {428, 1038, -746}, 0, {483, 1811}, {80, 158, 4, 255} }},
+	{{ {520, 1118, -645}, 0, {827, 1814}, {80, 158, 4, 255} }},
+	{{ {218, 891, -182}, 0, {850, 510}, {95, 175, 24, 255} }},
+	{{ {34, 732, -383}, 0, {161, 504}, {80, 158, 3, 255} }},
+	{{ {335, 957, -848}, 0, {133, 1808}, {80, 158, 4, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_6[] = {
@@ -568,18 +568,18 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_6[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_7[12] = {
-	{{ {131, 1001, -783}, 0, {556, 1847}, {208, 114, 27, 255} }},
-	{{ {81, 971, -817}, 0, {408, 1846}, {186, 105, 10, 255} }},
-	{{ {-144, 771, -301}, 0, {433, 542}, {210, 115, 26, 255} }},
-	{{ {204, 1003, -750}, 0, {712, 1848}, {235, 117, 44, 255} }},
-	{{ {274, 1003, -718}, 0, {860, 1850}, {236, 117, 45, 255} }},
-	{{ {-5, 771, -238}, 0, {729, 545}, {238, 118, 43, 255} }},
-	{{ {162, 850, -829}, 0, {409, 1846}, {70, 151, 246, 255} }},
-	{{ {211, 881, -795}, 0, {556, 1847}, {89, 166, 8, 255} }},
-	{{ {-65, 650, -313}, 0, {432, 542}, {90, 167, 6, 255} }},
-	{{ {243, 942, -756}, 0, {711, 1848}, {103, 187, 26, 255} }},
-	{{ {-5, 771, -238}, 0, {729, 545}, {105, 190, 25, 255} }},
-	{{ {274, 1003, -718}, 0, {860, 1849}, {104, 188, 27, 255} }},
+	{{ {468, 1264, -607}, 0, {556, 1847}, {194, 109, 17, 255} }},
+	{{ {429, 1230, -650}, 0, {408, 1846}, {176, 98, 252, 255} }},
+	{{ {127, 1004, -186}, 0, {433, 542}, {195, 110, 16, 255} }},
+	{{ {532, 1272, -560}, 0, {712, 1848}, {216, 114, 39, 255} }},
+	{{ {595, 1278, -516}, 0, {860, 1850}, {217, 114, 40, 255} }},
+	{{ {251, 1016, -98}, 0, {729, 545}, {220, 116, 38, 255} }},
+	{{ {520, 1118, -645}, 0, {409, 1846}, {80, 158, 4, 255} }},
+	{{ {559, 1152, -602}, 0, {556, 1847}, {94, 174, 26, 255} }},
+	{{ {218, 891, -182}, 0, {432, 542}, {95, 175, 24, 255} }},
+	{{ {578, 1215, -558}, 0, {711, 1848}, {102, 196, 46, 255} }},
+	{{ {251, 1016, -98}, 0, {729, 545}, {104, 199, 45, 255} }},
+	{{ {595, 1278, -516}, 0, {860, 1849}, {102, 197, 47, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_7[] = {
@@ -592,27 +592,27 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_7[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_8[21] = {
-	{{ {-144, 771, -301}, 0, {439, 1855}, {210, 115, 26, 255} }},
-	{{ {-382, 577, 193}, 0, {425, 586}, {214, 119, 15, 255} }},
-	{{ {-5, 771, -238}, 0, {733, 1857}, {238, 118, 43, 255} }},
-	{{ {-245, 565, 240}, 0, {686, 606}, {0, 123, 32, 255} }},
-	{{ {-254, 544, 398}, 0, {828, 288}, {19, 125, 9, 255} }},
-	{{ {-414, 574, 446}, 0, {656, 86}, {240, 126, 0, 255} }},
-	{{ {-497, 499, 294}, 0, {278, 242}, {181, 103, 251, 255} }},
-	{{ {-65, 650, -313}, 0, {436, 1854}, {90, 167, 6, 255} }},
-	{{ {-5, 771, -238}, 0, {733, 1857}, {105, 190, 25, 255} }},
-	{{ {-291, 441, 180}, 0, {425, 586}, {94, 171, 252, 255} }},
-	{{ {-245, 565, 240}, 0, {686, 606}, {116, 206, 15, 255} }},
-	{{ {-254, 544, 398}, 0, {828, 288}, {123, 225, 250, 255} }},
-	{{ {-284, 380, 428}, 0, {656, 86}, {110, 195, 238, 255} }},
-	{{ {-398, 351, 280}, 0, {278, 242}, {65, 150, 231, 255} }},
-	{{ {-254, 544, 398}, 0, {828, 288}, {39, 15, 120, 255} }},
-	{{ {-414, 574, 446}, 0, {656, 86}, {210, 215, 111, 255} }},
-	{{ {-349, 477, 437}, 0, {656, 86}, {229, 227, 121, 255} }},
-	{{ {-497, 499, 294}, 0, {279, 241}, {189, 202, 93, 255} }},
-	{{ {-448, 425, 287}, 0, {278, 241}, {190, 203, 94, 255} }},
-	{{ {-398, 351, 280}, 0, {278, 242}, {189, 202, 93, 255} }},
-	{{ {-284, 380, 428}, 0, {656, 86}, {210, 215, 111, 255} }},
+	{{ {127, 1004, -186}, 0, {439, 1855}, {195, 110, 16, 255} }},
+	{{ {-183, 783, 254}, 0, {425, 586}, {201, 114, 6, 255} }},
+	{{ {251, 1016, -98}, 0, {733, 1857}, {220, 116, 38, 255} }},
+	{{ {-58, 783, 327}, 0, {686, 606}, {239, 122, 31, 255} }},
+	{{ {-95, 759, 480}, 0, {828, 288}, {5, 126, 12, 255} }},
+	{{ {-263, 774, 496}, 0, {656, 86}, {229, 124, 252, 255} }},
+	{{ {-308, 694, 331}, 0, {278, 242}, {175, 96, 236, 255} }},
+	{{ {218, 891, -182}, 0, {436, 1854}, {95, 175, 24, 255} }},
+	{{ {251, 1016, -98}, 0, {733, 1857}, {104, 199, 45, 255} }},
+	{{ {-79, 656, 259}, 0, {425, 586}, {101, 180, 15, 255} }},
+	{{ {-58, 783, 327}, 0, {686, 606}, {115, 216, 38, 255} }},
+	{{ {-95, 759, 480}, 0, {828, 288}, {124, 237, 18, 255} }},
+	{{ {-115, 593, 504}, 0, {656, 86}, {116, 205, 4, 255} }},
+	{{ {-195, 556, 337}, 0, {278, 242}, {78, 157, 244, 255} }},
+	{{ {-95, 759, 480}, 0, {828, 288}, {13, 16, 125, 255} }},
+	{{ {-263, 774, 496}, 0, {656, 86}, {193, 209, 100, 255} }},
+	{{ {-189, 684, 500}, 0, {656, 86}, {209, 223, 113, 255} }},
+	{{ {-308, 694, 331}, 0, {279, 241}, {177, 195, 79, 255} }},
+	{{ {-252, 625, 334}, 0, {278, 241}, {178, 196, 80, 255} }},
+	{{ {-195, 556, 337}, 0, {278, 242}, {177, 195, 79, 255} }},
+	{{ {-115, 593, 504}, 0, {656, 86}, {193, 209, 100, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_8[] = {
@@ -629,21 +629,21 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_8[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_9[15] = {
-	{{ {-497, 499, 294}, 0, {726, 209}, {181, 103, 251, 255} }},
-	{{ {-382, 577, 193}, 0, {874, 553}, {214, 119, 15, 255} }},
-	{{ {-659, 382, 177}, 0, {224, 200}, {183, 104, 5, 255} }},
-	{{ {-378, 630, -462}, 0, {196, 1816}, {185, 105, 9, 255} }},
-	{{ {-144, 771, -301}, 0, {887, 1822}, {210, 115, 26, 255} }},
-	{{ {-291, 441, 180}, 0, {874, 553}, {94, 171, 252, 255} }},
-	{{ {-298, 509, -473}, 0, {196, 1816}, {70, 151, 245, 255} }},
-	{{ {-65, 650, -313}, 0, {884, 1821}, {90, 167, 6, 255} }},
-	{{ {-578, 261, 166}, 0, {224, 200}, {67, 149, 241, 255} }},
-	{{ {-398, 351, 280}, 0, {726, 209}, {65, 150, 231, 255} }},
-	{{ {-448, 425, 287}, 0, {727, 208}, {190, 203, 94, 255} }},
-	{{ {-497, 499, 294}, 0, {727, 208}, {189, 202, 93, 255} }},
-	{{ {-659, 382, 177}, 0, {225, 199}, {208, 213, 110, 255} }},
-	{{ {-578, 261, 166}, 0, {224, 200}, {208, 213, 110, 255} }},
-	{{ {-398, 351, 280}, 0, {726, 209}, {189, 202, 93, 255} }},
+	{{ {-308, 694, 331}, 0, {726, 209}, {175, 96, 236, 255} }},
+	{{ {-183, 783, 254}, 0, {874, 553}, {201, 114, 6, 255} }},
+	{{ {-433, 564, 186}, 0, {224, 200}, {174, 96, 246, 255} }},
+	{{ {-58, 845, -389}, 0, {196, 1816}, {176, 98, 251, 255} }},
+	{{ {127, 1004, -186}, 0, {887, 1822}, {195, 110, 16, 255} }},
+	{{ {-79, 656, 259}, 0, {874, 553}, {101, 180, 15, 255} }},
+	{{ {34, 732, -383}, 0, {196, 1816}, {80, 158, 3, 255} }},
+	{{ {218, 891, -182}, 0, {884, 1821}, {95, 175, 24, 255} }},
+	{{ {-341, 452, 191}, 0, {224, 200}, {78, 156, 254, 255} }},
+	{{ {-195, 556, 337}, 0, {726, 209}, {78, 157, 244, 255} }},
+	{{ {-252, 625, 334}, 0, {727, 208}, {178, 196, 80, 255} }},
+	{{ {-308, 694, 331}, 0, {727, 208}, {177, 195, 79, 255} }},
+	{{ {-433, 564, 186}, 0, {225, 199}, {192, 208, 98, 255} }},
+	{{ {-341, 452, 191}, 0, {224, 200}, {192, 208, 98, 255} }},
+	{{ {-195, 556, 337}, 0, {726, 209}, {177, 195, 79, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_9[] = {
@@ -657,10 +657,10 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_9[] = {
 };
 
 Vtx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_vtx_10[4] = {
-	{{ {-298, 509, -473}, 0, {370, 1847}, {162, 199, 193, 255} }},
-	{{ {-578, 261, 166}, 0, {368, 231}, {162, 199, 193, 255} }},
-	{{ {-378, 630, -462}, 0, {687, 1847}, {162, 199, 193, 255} }},
-	{{ {-659, 382, 177}, 0, {685, 231}, {162, 199, 193, 255} }},
+	{{ {34, 732, -383}, 0, {370, 1847}, {181, 191, 176, 255} }},
+	{{ {-341, 452, 191}, 0, {368, 231}, {181, 192, 176, 255} }},
+	{{ {-58, 845, -389}, 0, {687, 1847}, {181, 191, 176, 255} }},
+	{{ {-433, 564, 186}, 0, {685, 231}, {181, 192, 176, 255} }},
 };
 
 Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_10[] = {
@@ -670,11 +670,11 @@ Gfx gExalinLeftSheath_003_gExalinLeftSheath_003_mesh_layer_Opaque_tri_10[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_c_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_c_pal_rgba16),
@@ -695,11 +695,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_c_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_d_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_d_pal_rgba16),
@@ -720,11 +720,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_d_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_e_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_e_pal_rgba16),
@@ -745,11 +745,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_e_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_f_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_f_pal_rgba16),
@@ -770,11 +770,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_f_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_g_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_g_pal_rgba16),
@@ -795,11 +795,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_g_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_h_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_h_pal_rgba16),
@@ -820,11 +820,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_h_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_i_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_i_pal_rgba16),
@@ -845,11 +845,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_i_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_j_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_j_pal_rgba16),
@@ -870,11 +870,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_j_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_k_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_k_pal_rgba16),
@@ -895,11 +895,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_k_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_l_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_l_pal_rgba16),
@@ -920,11 +920,11 @@ Gfx mat_revert_gExalinLeftSheath_003_sheath_l_f3d_layerOpaque[] = {
 };
 
 Gfx mat_gExalinLeftSheath_003_sheath_a_f3d_layerOpaque[] = {
-	gsSPLoadGeometryMode(G_CULL_BACK | G_SHADING_SMOOTH | G_SHADE | G_ZBUFFER | G_FOG | G_LIGHTING),
+	gsSPLoadGeometryMode(G_SHADING_SMOOTH | G_CULL_BACK | G_LIGHTING | G_SHADE | G_ZBUFFER | G_FOG),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, 1, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
-	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_PM_NPRIMITIVE | G_TC_FILT | G_CYC_2CYCLE | G_AD_NOISE | G_TT_RGBA16 | G_TD_CLAMP | G_TP_PERSP | G_TF_BILERP | G_CK_NONE | G_CD_MAGICSQ | G_TL_TILE),
-	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_ZS_PIXEL | G_AC_NONE | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
+	gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_TL_TILE | G_CD_MAGICSQ | G_TD_CLAMP | G_TC_FILT | G_CK_NONE | G_TT_RGBA16 | G_AD_NOISE | G_PM_NPRIMITIVE | G_TF_BILERP | G_TP_PERSP | G_CYC_2CYCLE),
+	gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_OPA_SURF2),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsDPSetPrimColor(0, 0, 255, 255, 255, 255),
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, gExalinLeftSheath_003_sheath_a_pal_rgba16),

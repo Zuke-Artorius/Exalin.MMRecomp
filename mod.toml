@@ -8,7 +8,7 @@
 id = "exalin_recomp_pelt_physics"
 
 # Version of this mod.
-version = "1.0.2"
+version = "1.0.4"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Exalin - Dragon Quest X"
@@ -21,8 +21,8 @@ Includes an offhand weapon for Zuke's Dual Wield mod.
 
 Toggleable HD Item Icons
 
-This mod features physics derived from Bigmetalhead12's work.
-namely the ponytail from Jackie Quilt version 1.0.6. 
+This mod features a physics codebased developed by Bigmetalhead12
+(Jackie Quilt 1.0.6) modified to accommodate disjointed limb chains
 
 Special thanks to Bigmetalhead12 for bug fixes.
 
@@ -90,43 +90,6 @@ additional_files = [
     "hdtextures/rt64.json",
     "hdtextures/rt64-low-mip-cache.bin",
 ]
-
-#[[manifest.config_options]]
-#id = "enum_option"
-#name = "Enum Option"
-#description = "Test enum config option"
-#type = "Enum"
-#options = [ "First", "Second" ]
-#default = "First"
-#
-#[[manifest.config_options]]
-#id = "number_option"
-#name = "Number Option"
-#description = "Test number config option."
-#type = "Number"
-#min = 0
-#max = 10
-#step = 0.1
-#precision = 1
-#percent = false
-#default = 1
-#
-#[[manifest.config_options]]
-#id = "string_option"
-#name = "String Option"
-#description = "Test string config option."
-#type = "String"
-#default = "Lorem Ipsum"
-
-#[[manifest.config_options]]
-#id = "display_pelt"
-#name = "Display Pelt"
-#description = """
-#Toggle to display pelt
-#"""
-#type = "Enum"
-#options = [ "Hide Pelt", "Show Pelt" ]
-#default = "Show Pelt"
 		
 [[manifest.config_options]]
 id = "_recomp_texture_pack_enabled"

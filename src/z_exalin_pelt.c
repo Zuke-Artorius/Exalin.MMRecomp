@@ -2,7 +2,9 @@
 /*
  * File: z_exalin_pelt.c
  * Overlay: ovl_Exalin_Pelt
- * Description: Gravestone
+ * Description: A pelt worn by Exalin featuring a physics codebase developed by Bigmetalhead12
+                this is derived from the Jackie Quilt mod version 1.0.6, the ponytail.
+                Modified to accommodate multiple disjointed chains
  */
 
 #include "z_exalin_pelt.h"

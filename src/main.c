@@ -7,6 +7,8 @@
 #include "modelreplacer_api.h"
 #include "z64save.h"
 #include "z64item.h"
+#include "gfx.h"
+#include "overlays/kaleido_scope/ovl_kaleido_scope/z_kaleido_scope.h"
 
 #include "skel/gExalinAdultSkel.h"
 #include "skel/gExalinAdultFistsSkel.h"
@@ -70,6 +72,7 @@
 #include "dl/gExalinIconMaskHood.h"
 #include "dl/gExalinIconMaskFisher.h"
 #include "dl/gExalinIconOcarina.h"
+#include "dl/gExalinIconEmpty.h"
 
 #define MASK_ROTATE_X 0.f
 #define MASK_ROTATE_Y 0.f
@@ -345,6 +348,8 @@ RECOMP_HOOK("Player_DrawImpl") void on_Player_DrawImpl(PlayState* play, void** s
     CLOSE_DISPS(play->state.gfxCtx);
 }
 
+// Adjusted ocarina grip animaton replacement
+
 #include "anim/gExalinAdultSkel_okarina_endAnim.h"
 #include "anim/gExalinAdultSkel_okarina_startAnim.h"
 #include "anim/gExalinAdultSkel_okarina_swingAnim.h"
@@ -371,7 +376,7 @@ bool exalinOcarinaOn;
 bool isExalin;
 bool isExalinVanillaSheath;
 
-RECOMP_HOOK("PlayerAnimation_Update") s32 on_PlayerAnimation_Update(struct PlayState* play, SkelAnime* skelAnime) {
+RECOMP_HOOK("PlayerAnimation_Update") void on_PlayerAnimation_Update(struct PlayState* play, SkelAnime* skelAnime) {
     Player* player = GET_PLAYER(play);
     
     exalinKokiriSwordOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinKokiriSwordHandle);
@@ -399,6 +404,8 @@ RECOMP_HOOK("PlayerAnimation_Update") s32 on_PlayerAnimation_Update(struct PlayS
         }
     }
 }
+
+// GI model replacement
 
 extern Gfx gGiKokiriSwordGuardDL[];
 extern Gfx gGiKokiriSwordBladeHiltDL[];
@@ -457,6 +464,8 @@ MODEL_REPLACER_CALLBACK_ON_REGISTER_REPLACERS void registerExalinGiModels() {
     ModelReplacer_setReplacerModel(exalinGiMaskHood2, gGiCull);
 }
 
+// Dependency check for BunnyHoodTweaks
+
 bool bunnyHoodTweaksEnabled = false;
 
 RECOMP_IMPORT("yazmt_mm_bunnyhoodtweaks", bool BunnyHoodTweaks_isPlayerRunSpeedModified(PlayState *play, Player *player));
@@ -481,7 +490,7 @@ RECOMP_CALLBACK("*", recomp_on_init) void on_init() {
     }
 }
 
-// Draw upper section of hood
+// Draw upper section of Exalin's hood
 
 u8 gPushedHeadMatrix;
 bool exalinHoodOn;
@@ -512,8 +521,6 @@ RECOMP_HOOK_RETURN("Player_DrawBunnyHood") void return_Player_DrawBunnyHood(void
     gPushedHeadMatrix = 0;
 }
 
-// Draw lower section of hood
-
 u8 gPushedSwordHandleMatrix;
 u8 gPushedRHShieldMatrix;
 u8 gPushedBowstringMatrix;
@@ -532,39 +539,39 @@ bool exalinDrawLeftSheathToggle = false;
 bool exalinDrawRightSheathToggle = false;
 bool exalinDrawLeftSheathHandleToggle = false;
 bool exalinDrawRightSheathHandleToggle = false;
-
 bool hoodSpeedIsActive = false;
+
+// Draw lower section of Exalin's hood
+/*
+    If BunnyHoodTweaks is detected, check against modified run speed using exported function.
+    Otherwise, check against bunny hood's mask index.
+    BHT changes the bunny hood, so player->currentMask is 0 while wearing it. 
+*/
 
 RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(PlayState* play, s32 limbIndex, Gfx** dList1, Gfx** dList2, Vec3s* rot, Actor* actor) {
     Player* player = (Player*)actor;
     exalinHoodOn = PlayerModelManager_Actor_isModelApplied(&player->actor, gExalinHoodHandle);
+    // Logic for drawing bottom of the hood
     if (bunnyHoodTweaksEnabled) {
         hoodSpeedIsActive = BunnyHoodTweaks_isPlayerRunSpeedModified(play, player);
         if (hoodSpeedIsActive && !player->currentMask) {
             exalinDrawHoodBot = gExalinAdultHoodSkel_bone020_gLinkZoraTorsoLimb_mesh_layer_Opaque;
-            if (player->stateFlags1 & PLAYER_STATE1_100000) {
-                Vec3f temp;
-                SkinMatrix_Vec3fMtxFMultXYZ(&play->viewProjectionMtxF, &player->actor.focus.pos, &temp);
-                if (temp.z < 5.0f) {
-                    exalinDrawHoodBot = gGiCull;
-                }
-            }
         } else {
             exalinDrawHoodBot = gGiCull;
         }
     } else {
         if (player->currentMask == PLAYER_MASK_BUNNY) {
             exalinDrawHoodBot = gExalinAdultHoodSkel_bone020_gLinkZoraTorsoLimb_mesh_layer_Opaque;
-            if (player->stateFlags1 & PLAYER_STATE1_100000) {
-                Vec3f temp;
-                SkinMatrix_Vec3fMtxFMultXYZ(&play->viewProjectionMtxF, &player->actor.focus.pos, &temp);
-                if (temp.z < 5.0f) {
-                    exalinDrawHoodBot = gGiCull;
-                }
-            }
         } else {
             exalinDrawHoodBot = gGiCull;
         }
+    }
+    if (player->stateFlags1 & PLAYER_STATE1_100000) {
+        Vec3f temp;
+        SkinMatrix_Vec3fMtxFMultXYZ(&play->viewProjectionMtxF, &player->actor.focus.pos, &temp);
+        if (temp.z < 5.0f) {
+            exalinDrawHoodBot = gGiCull;
+            }
     }
 
     if (exalinHoodOn) {
@@ -588,6 +595,7 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
     EquipValueSword swordEquipValue;
     EquipValueShield shieldEquipValue;
 
+    // Logic for drawing handles in the left hand
     if (limbIndex == PLAYER_LIMB_LEFT_HAND) {
         if ((player->leftHandType == PLAYER_MODELTYPE_LH_ONE_HAND_SWORD) &&
             (player->transformation == PLAYER_FORM_HUMAN) &&
@@ -606,6 +614,8 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                         case EQUIP_VALUE_SWORD_GILDED:
                             exalinDrawSwordHandle = gExTwinSword3Handle;
                             break;
+                        default:
+                            break;
                     }
                     OPEN_DISPS(play->state.gfxCtx);
                     Matrix_Push();
@@ -617,6 +627,7 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
         } else {
             gPushedSwordHandleMatrix = 0;
         }
+    // Adjust bowstring position
     } else if (limbIndex == PLAYER_LIMB_RIGHT_HAND) {
         Actor* heldActor = player->heldActor;
         s32 pad;
@@ -633,6 +644,7 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                     CLOSE_DISPS(play->state.gfxCtx);
                 }
             }
+            // Logic for drawing sword in the offhand
             if ((player->rightHandType == PLAYER_MODELTYPE_RH_SHIELD) && 
                 (player->leftHandType == PLAYER_MODELTYPE_LH_ONE_HAND_SWORD) &&
                 (player->transformation == PLAYER_FORM_HUMAN) &&
@@ -655,6 +667,8 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                                 exalinDrawShieldHandle = gExTwinSword3Handle;
                                 exalinDrawShieldBlade = gExTwinSword3Blade;
                                 break;
+                            default:
+                                break;
                         }
                         OPEN_DISPS(play->state.gfxCtx);
                         Matrix_Push();
@@ -669,6 +683,7 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
             gPushedBowstringMatrix = 0;
             gPushedRHShieldMatrix = 0;
         }
+    // Logic for drawing sheaths, and stowed handles
     } else if (limbIndex == PLAYER_LIMB_SHEATH) {
             if (player->currentShield != PLAYER_SHIELD_NONE) {
                 exalinDrawLeftSheathToggle = true;
@@ -790,7 +805,7 @@ RECOMP_HOOK_RETURN("Player_PostLimbDrawGameplay") void return_Player_PostLimbDra
     gPushedBowstringMatrix = 0;
 }
 
-// Draw custom item icons
+// Replace item icons
 
 u8 gCurIconIsKokiriSword = 0;
 u8 gCurIconIsRazorSword = 0;
@@ -861,6 +876,8 @@ RECOMP_HOOK("CmpDma_LoadFileImpl") void on_CmpDma_LoadFileImpl(uintptr_t segment
                     gCurIconIsOcarina = 1;
                 }
                 break;
+            default:
+                break;
         }
     } else {
         gCurIconIsKokiriSword = 0;
@@ -891,10 +908,10 @@ RECOMP_HOOK_RETURN("CmpDma_LoadFileImpl") void return_CmpDma_LoadFileImpl(void) 
         Lib_MemCpy(gDst, gExalinIconFairySword_exalin_icon_fairy_great_sword_rgba32, ICON_ITEM_TEX_SIZE);
     }
     if (gCurIconIsHeroShield && exalinHeroShieldOn) {
-        Lib_MemCpy(gDst, gExalinIconGildedSword_exalin_icon_gilded_sword_rgba32, ICON_ITEM_TEX_SIZE);
+        Lib_MemCpy(gDst, gExalinIconEmpty_exalin_icon_empty_rgba32, ICON_ITEM_TEX_SIZE);
     }
     if (gCurIconIsMirrorShield && exalinMirrorShieldOn) {
-        Lib_MemCpy(gDst, gExalinIconGildedSword_exalin_icon_gilded_sword_rgba32, ICON_ITEM_TEX_SIZE);
+        Lib_MemCpy(gDst, gExalinIconEmpty_exalin_icon_empty_rgba32, ICON_ITEM_TEX_SIZE);
     }
     if (gCurIconIsMaskHood && exalinHoodOn) {
         Lib_MemCpy(gDst, gExalinIconMaskHood_exalin_icon_mask_hood_rgba32, ICON_ITEM_TEX_SIZE);
@@ -915,5 +932,28 @@ RECOMP_HOOK_RETURN("CmpDma_LoadFileImpl") void return_CmpDma_LoadFileImpl(void) 
     gCurIconIsMaskHood = 0;
     gCurIconIsMaskFisher = 0;
     gCurIconIsOcarina = 0;
+
+}
+
+// Draw the offhand sword icon
+
+RECOMP_HOOK("KaleidoScope_DrawQuestStatus") void on_KaleidoScope_DrawQuestStatus(PlayState* play) {
+    GraphicsContext* gfxCtx = play->state.gfxCtx;
+    PauseContext* pauseCtx = &play->pauseCtx;
+    
+    if ((GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SHIELD) != EQUIP_VALUE_SHIELD_NONE) && (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD) != EQUIP_VALUE_SWORD_NONE)) {
+        OPEN_DISPS(play->state.gfxCtx);
+
+        KaleidoScope_SetCursorVtxPos(pauseCtx, pauseCtx->cursorSlot[PAUSE_QUEST] * 4, pauseCtx->questVtx);
+
+        // Draw shield
+        gDPPipeSync(POLY_OPA_DISP++);
+        gDPSetPrimColor(POLY_OPA_DISP++, 0, 0, 255, 255, 255, pauseCtx->alpha);
+        gDPSetCombineMode(POLY_OPA_DISP++, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
+        // shield icon is index 16
+        gSPVertex(POLY_OPA_DISP++, &pauseCtx->questVtx[16], 4, 0);
+        KaleidoScope_DrawTexQuadRGBA32(play->state.gfxCtx, gItemIcons[(ITEM_SWORD_KOKIRI - 1) + GET_CUR_EQUIP_VALUE(0)], 32, 32, 0);
+        CLOSE_DISPS(play->state.gfxCtx);
+    }
 
 }
