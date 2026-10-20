@@ -645,8 +645,8 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                 }
             }
             // Logic for drawing sword in the offhand
-            if ((player->rightHandType == PLAYER_MODELTYPE_RH_SHIELD) && 
-                (player->leftHandType == PLAYER_MODELTYPE_LH_ONE_HAND_SWORD) &&
+            if (((player->rightHandType == PLAYER_MODELTYPE_RH_SHIELD) || 
+                (player->leftHandType == PLAYER_MODELTYPE_LH_ONE_HAND_SWORD)) &&
                 (player->transformation == PLAYER_FORM_HUMAN) &&
                 ((swordEquipValue = GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD),
                 swordEquipValue != EQUIP_VALUE_SWORD_NONE)) &&
@@ -691,6 +691,7 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                 exalinDrawLeftSheathToggle = false;
             }
 
+
             if ((player->sheathType == PLAYER_MODELTYPE_SHEATH_14) ||
                 (player->sheathType == PLAYER_MODELTYPE_SHEATH_15)) {
                 exalinDrawRightSheathHandleToggle = true;
@@ -699,6 +700,9 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                 } else {
                     exalinDrawLeftSheathHandleToggle = false;
                 }
+            } else if (player->sheathType == PLAYER_MODELTYPE_SHEATH_12) {
+                exalinDrawLeftSheathHandleToggle = true;
+                exalinDrawRightSheathHandleToggle = false;
             } else {
                 exalinDrawLeftSheathHandleToggle = false;
                 exalinDrawRightSheathHandleToggle = false;
@@ -710,7 +714,9 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                 if ((*dList1 != NULL) && (player->transformation == PLAYER_FORM_HUMAN)) {
                     if ((exalinKokiriSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_KOKIRI) || 
                     (exalinRazorSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_RAZOR) || 
-                    (exalinGildedSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_GILDED)) {
+                    (exalinGildedSwordOn && swordEquipValue == EQUIP_VALUE_SWORD_GILDED) ||
+                    (exalinHeroShieldOn && shieldEquipValue == EQUIP_VALUE_SHIELD_HERO) ||
+                    (exalinMirrorShieldOn && shieldEquipValue == EQUIP_VALUE_SHIELD_MIRROR)) {
                         switch (swordEquipValue) {
                             case EQUIP_VALUE_SWORD_KOKIRI:
                                 exalinDrawLeftSheath = gExalinLeftSheath_001;
@@ -744,6 +750,19 @@ RECOMP_HOOK("Player_PostLimbDrawGameplay") void on_Player_PostLimbDrawGameplay(P
                 exalinDrawLeftSheathToggle = false;
                 exalinDrawLeftSheathHandleToggle = false;
             }
+
+            // Cull in FPS
+            if (player->stateFlags1 & PLAYER_STATE1_100000) {
+                Vec3f temp;
+                SkinMatrix_Vec3fMtxFMultXYZ(&play->viewProjectionMtxF, &player->actor.focus.pos, &temp);
+                if (temp.z < 5.0f) {
+                    exalinDrawLeftSheathToggle = false;
+                    exalinDrawLeftSheathHandleToggle = false;
+                    exalinDrawRightSheathToggle = false;
+                    exalinDrawRightSheathHandleToggle = false;
+                    }
+            }
+
             if (!exalinDrawLeftSheathToggle || !isExalin) {
                 exalinDrawLeftSheath = gGiCull;
             }
